@@ -1,0 +1,20 @@
+.contact-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 50%;
+}
+
+.icon-container {
+  display: flex;
+  flex-flow: row nowrap;
+}

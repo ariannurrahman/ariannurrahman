@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Jumbotron, Button, Container, Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import Typist from "react-typist";
 
@@ -10,17 +10,25 @@ import birdflying from "../images/gif/birdflying.gif";
 import birdflying2 from "../images/gif/birdflying2.gif";
 const Home = () => {
   const history = useHistory();
-  const sectionStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-  };
+
   return (
     <div className="home-container">
       <div id="bg">
         <img src={backgroundImage} alt="" />
       </div>
 
-      <img src={birdflying} style={{ width: "100px" }} className="bird" />
-      <img src={birdflying2} style={{ width: "150px" }} className="bird2" />
+      <img
+        src={birdflying}
+        style={{ width: "100px" }}
+        className="bird"
+        alt="firstbird"
+      />
+      <img
+        src={birdflying2}
+        style={{ width: "150px" }}
+        className="bird2"
+        alt="secondbird"
+      />
 
       <Typist avgTypingDelay={50} startDelay={750} cursor={{ show: false }}>
         <p className="title-style-home">Hi!</p>

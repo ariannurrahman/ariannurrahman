@@ -32,8 +32,8 @@
 .outer-bar .progress-bar {
   border-radius: 8px;
   background-color: #31d843;
-  -webkit-animation: progressBar 3s ease-in-out;
-          animation: progressBar 3s ease-in-out;
+  -webkit-animation: progressBar 2s ease-in-out;
+          animation: progressBar 2s ease-in-out;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }

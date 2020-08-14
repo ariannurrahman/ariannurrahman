@@ -32,7 +32,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   position: relative;
   margin: 20px 0;
   &:hover {
-    color: rgba(252, 244, 244, 0.5);
+    color: rgba(252, 244, 244, 0.9);
   }
   &:active {
     color: $darkGreen;

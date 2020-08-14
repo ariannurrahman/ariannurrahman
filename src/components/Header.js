@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Nav, Image } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import home from "../images/home.svg";
@@ -13,13 +13,15 @@ import github from "../images/github.svg";
 import an from "../images/an.svg";
 const Header = () => {
   const sosmedList = [linkedin, gmail, github];
-  const renderSosmed = sosmedList.map((element) => {
+  const renderSosmed = sosmedList.map((element, index) => {
     const splitLink = element.split("/");
     const getLink = splitLink[3].split(".");
-    console.log(getLink);
     return (
-      <a href={`https://${getLink[0]}.com/ariannurrahman`}>
-        <Image src={element} alt="sosmed" />
+      <a
+        href={`https://${getLink[0]}.com/ariannurrahman`}
+        key={`imagelink-${index}`}
+      >
+        <Image src={element} alt="sosmed" key={`header-${index}`} />
       </a>
     );
   });
@@ -35,7 +37,6 @@ const Header = () => {
           <img
             src={home}
             alt="#"
-            fluid
             style={{ width: "40px" }}
             className="navigation-image"
           />
@@ -48,7 +49,6 @@ const Header = () => {
           <img
             src={about}
             alt="#"
-            fluid
             style={{ width: "40px" }}
             className="navigation-image"
           />
@@ -61,7 +61,6 @@ const Header = () => {
           <img
             src={skills}
             alt="#"
-            fluid
             style={{ width: "40px" }}
             className="navigation-image"
           />
@@ -74,7 +73,6 @@ const Header = () => {
           <img
             src={contact}
             alt="#"
-            fluid
             style={{ width: "40px" }}
             className="navigation-image"
           />
