@@ -1,0 +1,97 @@
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
+.home-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 100px;
+  color: $darkGreen;
+  height: 100vh;
+}
+
+#bg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.button-contactme {
+  color: $darkGreen;
+  margin-top: 30px;
+  border: $borderColor 3px solid;
+  opacity: 0;
+  display: block;
+  animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+}
+
+@keyframes shaking {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 220px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.bird {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  animation: flying 7s 1s ease-in-out forwards;
+}
+
+.bird2 {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  animation: flying2 3s 1s ease-in-out forwards;
+}
+
+@keyframes flying {
+  0% {
+    left: 100px;
+  }
+
+  100% {
+    left: 1100px;
+  }
+}
+
+@keyframes flying2 {
+  0% {
+    right: 0px;
+  }
+
+  100% {
+    right: 200px;
+  }
+}

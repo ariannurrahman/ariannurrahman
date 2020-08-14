@@ -1,0 +1,65 @@
+.skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.skillbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.outer-bar {
+  width: 100%;
+  height: 50px;
+  border: 3px solid #38a700;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.outer-bar .progress-bar {
+  border-radius: 8px;
+  background-color: #31d843;
+  -webkit-animation: progressBar 3s ease-in-out;
+          animation: progressBar 3s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.outer-bar span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=skillStyle.css.map */

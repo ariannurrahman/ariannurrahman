@@ -1,0 +1,44 @@
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
+// https://coolors.co/293f14-386c0b-38a700-31d843-3eff8b
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  width: 95%;
+  height: 100vh;
+  margin: 0% 5% 0% 5%;
+  background-color: $BGcolor;
+  background-image: linear-gradient($BGcolor, $SubBG);
+}
+
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30vh;
+  color: $darkGreen;
+}
+.title-style {
+  font-size: 75px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  transition: all 0.1s ease;
+  color: $darkGreen;
+
+  &:hover {
+    font-size: 50px;
+    font-weight: 765;
+    letter-spacing: 8px;
+  }
+}
+
+.title-style-home {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}

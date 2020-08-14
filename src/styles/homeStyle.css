@@ -1,0 +1,142 @@
+.home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 100px;
+  color: #293f14;
+  height: 100vh;
+}
+
+#bg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.button-contactme {
+  color: #293f14;
+  margin-top: 30px;
+  border: #38a700 3px solid;
+  opacity: 0;
+  display: block;
+  -webkit-animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+          animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+  -webkit-box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+          box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+}
+
+@-webkit-keyframes shaking {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 220px;
+  }
+}
+
+@keyframes shaking {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 220px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.bird {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  -webkit-animation: flying 7s 1s ease-in-out forwards;
+          animation: flying 7s 1s ease-in-out forwards;
+}
+
+.bird2 {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  -webkit-animation: flying2 3s 1s ease-in-out forwards;
+          animation: flying2 3s 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes flying {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 1100px;
+  }
+}
+
+@keyframes flying {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 1100px;
+  }
+}
+
+@-webkit-keyframes flying2 {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+@keyframes flying2 {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+/*# sourceMappingURL=homestyle.css.map */

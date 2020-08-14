@@ -1,0 +1,136 @@
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #31d843;
+  border-right: #38a700 5px solid;
+  width: 100px;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+}
+
+.navigation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #31d843;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-button {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: gray;
+  position: relative;
+  margin: 20px 0;
+}
+
+.navigation-button:hover {
+  color: rgba(252, 244, 244, 0.5);
+}
+
+.navigation-button:active {
+  color: #293f14;
+  text-decoration: none;
+}
+
+.navigation-button:visited {
+  text-decoration: none;
+}
+
+.navigation-button:link {
+  text-decoration: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #31d843;
+}
+
+.navigation-button:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #386c0b;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.navigation-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sosmed-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sosmed-container img {
+  width: 40px;
+  margin: 10px;
+}
+
+.an-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.an-container img {
+  width: 50px;
+  margin: 10px;
+}
+/*# sourceMappingURL=headerStyle.css.map */

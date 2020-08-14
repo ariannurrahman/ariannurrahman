@@ -1,0 +1,42 @@
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
+.skill-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.skillbar-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.outer-bar {
+  width: 100%;
+  height: 50px;
+  border: 3px solid $borderColor;
+  border-radius: 10px;
+  margin: 30px;
+  .progress-bar {
+    border-radius: 8px;
+    background-color: $SubBG;
+    animation: progressBar 3s ease-in-out;
+    animation-fill-mode: both;
+  }
+  span {
+    display: flex;
+    height: 100%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
