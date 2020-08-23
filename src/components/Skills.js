@@ -24,7 +24,14 @@ const Skills = () => {
   return (
     <Container className="skill-container">
       <div className="title-container">{renderTitle}</div>
-      <div className="skillbar-container">{renderSkillSet}</div>
+      <div className="skill-bottom">
+        <div className="skill left">
+          <h1> Im on left</h1>
+        </div>
+        <div className="skill right">
+          <div className="skillbar-container">{renderSkillSet}</div>
+        </div>
+      </div>
     </Container>
   );
 };

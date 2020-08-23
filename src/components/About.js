@@ -8,7 +8,31 @@ const About = () => {
   const renderTitle = title.map((element) => {
     return <p className="title-style">{element}</p>;
   });
-  return <Container className="about-container">{renderTitle}</Container>;
+  return (
+    <Container className="about-container">
+      <div className="about-wrapper left">
+        <div className="title-container">{renderTitle}</div>
+        <div className="about-content">
+          <h3>Front end web developer</h3>
+          <h5>Self-driven, love technology, well-organized</h5>
+          <h5>
+            Interested in entire front-end web development in fast pacing speed
+            with positive environment
+          </h5>
+        </div>
+      </div>
+
+      <div className="about-wrapper right">
+        <div className="box-container">
+          <div className="about-box"></div>
+          <div className="about-box"></div>
+          <div className="about-box"></div>
+          <div className="about-box"></div>
+          <div className="about-box"></div>
+        </div>
+      </div>
+    </Container>
+  );
 };
 
 export default About;

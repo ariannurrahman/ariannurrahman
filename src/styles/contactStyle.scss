@@ -1,9 +1,19 @@
 .contact-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.contact-vertical {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  .top {
+    align-items: flex-start;
+  }
 }
 
 .contact {
