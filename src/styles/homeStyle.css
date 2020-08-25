@@ -18,23 +18,12 @@
 
 .home-top .bird {
   position: absolute;
-  visibility: hidden;
-}
-
-.home-top .bird1 {
+  opacity: 0;
   top: 20vh;
-  left: 0px;
+  left: 60%;
   width: 15%;
-  -webkit-animation: flying 4s 0.1s ease-in-out forwards;
-          animation: flying 4s 0.1s ease-in-out forwards;
-}
-
-.home-top .bird2 {
-  top: 25vh;
-  right: 0px;
-  width: 30%;
-  -webkit-animation: flying2 10s 0.1s ease-in-out forwards;
-          animation: flying2 10s 0.1s ease-in-out forwards;
+  -webkit-animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+          animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
 }
 
 .bgsmall {
@@ -46,10 +35,6 @@
   opacity: 0;
   -webkit-animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
           animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-}
-
-.bgbig {
-  display: none;
 }
 
 .bottombg-box {
@@ -178,88 +163,35 @@
   }
 }
 
-@-webkit-keyframes flying2 {
-  0% {
-    right: 0px;
-    visibility: visible;
-  }
-  100% {
-    right: 350%;
-    visibility: hidden;
-  }
-}
-
-@keyframes flying2 {
-  0% {
-    right: 0px;
-    visibility: visible;
-  }
-  100% {
-    right: 350%;
-    visibility: hidden;
-  }
-}
-
 @media only screen and (min-width: 768px) {
-  .home-top .bird1 {
+  .home-top .bird {
     width: 10%;
-    -webkit-animation: flying 4s 0.1s ease-in-out forwards;
-            animation: flying 4s 0.1s ease-in-out forwards;
-  }
-  .home-top .bird2 {
-    width: 20%;
-    -webkit-animation: flying2 10s 0.1s ease-in-out forwards;
-            animation: flying2 10s 0.1s ease-in-out forwards;
   }
   .bottombg-box {
     display: none;
   }
-  .bgbig {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    position: fixed;
-    right: -350px;
-    bottom: 0;
-    width: 100%;
-  }
-  .bgbig img {
-    display: block;
+  .bgsmall {
+    top: 15vh;
   }
   .home-bottom {
-    margin-left: 8%;
+    margin-left: 12%;
   }
   .home-bottom .home-left {
     width: 100%;
   }
   .home-bottom .home-left p {
     font-weight: 700;
-    font-size: 2rem;
-  }
-  .home-bottom .home-right img {
-    display: none;
+    font-size: 2.5rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .home-bottom {
-    margin-left: 15%;
-  }
   .home-bottom .home-left {
     width: 100%;
   }
   .home-bottom .home-left p {
     font-weight: 700;
     font-size: 3rem;
-  }
-  .home-bottom .home-right img {
-    display: none;
   }
 }
 /*# sourceMappingURL=homestyle.css.map */

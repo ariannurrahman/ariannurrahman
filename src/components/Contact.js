@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Form, Col, Button } from "react-bootstrap";
+import { Form, Col, Button } from "react-bootstrap";
 
 import "../styles/mainstyle.css";
 import "../styles/contactStyle.css";

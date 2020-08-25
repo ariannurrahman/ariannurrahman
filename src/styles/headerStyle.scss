@@ -19,13 +19,16 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   .navigation-image,
   .navigation-image-social {
     width: 30px;
-    margin: 10px;
+    margin: 0 10px;
     flex: 1;
   }
 
   .navigation-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     .navigation-button {
       flex: 1;
       text-decoration: none;
@@ -46,10 +49,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
 @media only screen and (min-width: 768px) {
   .header-container {
-    justify-content: space-around;
+    justify-content: space-between;
     .navigation-image {
       width: 40px;
-      margin: 25px;
+      margin: 0 25px;
       flex: 1;
     }
     .navigation-image-social {
@@ -58,6 +61,8 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
     }
     .sosmed-container {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -65,74 +70,79 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 @media only screen and (min-width: 1024px) {
   .header-container {
     flex-flow: column nowrap;
-    border-right: $borderColor 5px solid;
+    justify-content: space-between;
+    width: 10vh;
     height: 100vh;
-    width: 80px;
-    left: 0;
     top: 0;
-
-    .navigation-image {
-      width: 40px;
-      margin: 15px;
-      flex: 1;
-    }
-  }
-
-  .sosmed-container {
-    display: flex;
-    flex-flow: column nowrap;
+    left: 0;
+    border-right: 5px solid $borderColor;
+    .navigation-image,
     .navigation-image-social {
       width: 40px;
-      margin: 5px;
-      flex: 1;
+      margin: 5px 10px;
     }
-  }
+    .an-container {
+      justify-content: center;
+      align-items: center;
+    }
+    .navigation-container {
+      flex-flow: column nowrap;
 
-  .navigation-button {
-    text-decoration: none;
-    font-size: 1vw;
-    font-weight: 600;
-    color: gray;
+      width: 10vh;
+      .navigation-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        height: 20px;
+        font-size: 1vw;
+        font-weight: 600;
+        color: rgb(82, 78, 78);
+        text-align: center;
+        &:hover {
+          color: rgba(252, 244, 244, 1);
+        }
+        &:active {
+          color: $darkGreen;
+          text-decoration: none;
+        }
+        &:visited {
+          text-decoration: none;
+        }
+        &:link {
+          text-decoration: none;
+        }
+      }
+    }
 
-    &:hover {
-      color: rgba(252, 244, 244, 1);
+    .overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: $SubBG;
     }
-    &:active {
-      color: $darkGreen;
-      text-decoration: none;
+    .navigation-button:hover .overlay {
+      opacity: 1;
     }
-    &:visited {
-      text-decoration: none;
+    .text {
+      display: block !important;
+      color: $actColor;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
-    &:link {
-      text-decoration: none;
+    .sosmed-container {
+      flex-flow: column nowrap;
     }
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: $SubBG;
-  }
-  .navigation-button:hover .overlay {
-    opacity: 1;
-  }
-  .text {
-    display: block !important;
-    color: $actColor;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
   }
 }

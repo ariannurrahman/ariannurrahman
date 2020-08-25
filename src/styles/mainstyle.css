@@ -1,5 +1,5 @@
 * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -24,22 +24,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30vh;
+  height: 50vh;
   color: #293f14;
-}
-
-.title-style {
-  font-size: 75px;
-  font-weight: 700;
-  letter-spacing: 5px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-  color: #293f14;
-}
-
-.title-style:hover {
-  font-size: 50px;
-  font-weight: 765;
-  letter-spacing: 8px;
 }
 /*# sourceMappingURL=mainStyle.css.map */

@@ -17,19 +17,11 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 .home-top {
   .bird {
     position: absolute;
-    visibility: hidden;
-  }
-  .bird1 {
+    opacity: 0;
     top: 20vh;
-    left: 0px;
+    left: 60%;
     width: 15%;
-    animation: flying 4s 0.1s ease-in-out forwards;
-  }
-  .bird2 {
-    top: 25vh;
-    right: 0px;
-    width: 30%;
-    animation: flying2 10s 0.1s ease-in-out forwards;
+    animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   }
 }
 
@@ -41,10 +33,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   margin: 0;
   opacity: 0;
   animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-}
-
-.bgbig {
-  display: none;
 }
 
 .bottombg-box {
@@ -129,27 +117,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   }
 }
 
-@keyframes flying2 {
-  0% {
-    right: 0px;
-    visibility: visible;
-  }
-
-  100% {
-    right: 350%;
-    visibility: hidden;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .home-top {
-    .bird1 {
+    .bird {
       width: 10%;
-      animation: flying 4s 0.1s ease-in-out forwards;
-    }
-    .bird2 {
-      width: 20%;
-      animation: flying2 10s 0.1s ease-in-out forwards;
     }
   }
 
@@ -157,32 +128,17 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
     display: none;
   }
 
-  .bgbig {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: fixed;
-    right: -350px;
-    bottom: 0;
-    width: 100%;
-    img {
-      display: block;
-    }
+  .bgsmall {
+    top: 15vh;
   }
 
   .home-bottom {
-    margin-left: 8%;
+    margin-left: 12%;
     .home-left {
       width: 100%;
       p {
         font-weight: 700;
-        font-size: 2rem;
-      }
-    }
-
-    .home-right {
-      img {
-        display: none;
+        font-size: 2.5rem;
       }
     }
   }
@@ -190,18 +146,11 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
 @media only screen and (min-width: 1024px) {
   .home-bottom {
-    margin-left: 15%;
     .home-left {
       width: 100%;
       p {
         font-weight: 700;
         font-size: 3rem;
-      }
-    }
-
-    .home-right {
-      img {
-        display: none;
       }
     }
   }

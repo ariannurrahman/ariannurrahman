@@ -24,7 +24,7 @@
 .header-container .navigation-image,
 .header-container .navigation-image-social {
   width: 30px;
-  margin: 10px;
+  margin: 0 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -36,8 +36,15 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
 }
 
 .header-container .navigation-container .navigation-button {
@@ -62,12 +69,13 @@
 
 @media only screen and (min-width: 768px) {
   .header-container {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header-container .navigation-image {
     width: 40px;
-    margin: 25px;
+    margin: 0 25px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -82,6 +90,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -91,71 +105,89 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    border-right: #38a700 5px solid;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 10vh;
     height: 100vh;
-    width: 80px;
-    left: 0;
     top: 0;
+    left: 0;
+    border-right: 5px solid #38a700;
   }
-  .header-container .navigation-image {
+  .header-container .navigation-image,
+  .header-container .navigation-image-social {
     width: 40px;
-    margin: 15px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    margin: 5px 10px;
   }
-  .sosmed-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .header-container .an-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-container .navigation-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    width: 10vh;
   }
-  .sosmed-container .navigation-image-social {
-    width: 40px;
-    margin: 5px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .navigation-button {
+  .header-container .navigation-container .navigation-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-decoration: none;
+    height: 20px;
     font-size: 1vw;
     font-weight: 600;
-    color: gray;
+    color: #524e4e;
+    text-align: center;
   }
-  .navigation-button:hover {
+  .header-container .navigation-container .navigation-button:hover {
     color: #fcf4f4;
   }
-  .navigation-button:active {
+  .header-container .navigation-container .navigation-button:active {
     color: #293f14;
     text-decoration: none;
   }
-  .navigation-button:visited {
+  .header-container .navigation-container .navigation-button:visited {
     text-decoration: none;
   }
-  .navigation-button:link {
+  .header-container .navigation-container .navigation-button:link {
     text-decoration: none;
   }
-  .overlay {
+  .header-container .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     background-color: #31d843;
   }
-  .navigation-button:hover .overlay {
+  .header-container .navigation-button:hover .overlay {
     opacity: 1;
   }
-  .text {
+  .header-container .text {
     display: block !important;
     color: #386c0b;
     font-size: 20px;
@@ -163,8 +195,14 @@
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: center;
+  }
+  .header-container .sosmed-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
 }
 /*# sourceMappingURL=headerStyle.css.map */
