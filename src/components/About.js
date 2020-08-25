@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+
 import "../styles/aboutStyle.css";
 import "../styles/mainstyle.css";
 
@@ -9,7 +9,7 @@ const About = () => {
     return <p className="title-style">{element}</p>;
   });
   return (
-    <Container className="about-container">
+    <div className="main-container">
       <div className="about-wrapper left">
         <div className="title-container">{renderTitle}</div>
         <div className="about-content">
@@ -31,7 +31,7 @@ const About = () => {
           <div className="about-box"></div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

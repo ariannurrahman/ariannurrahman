@@ -16,7 +16,7 @@ const Contact = () => {
   const renderIcon = iconList.map((element, index) => {
     return (
       <div style={{ width: "100px", margin: "30px" }}>
-        <Image src={element} alt="" fluid roundedCircle />
+        <img src={element} alt="" />
       </div>
     );
   });
@@ -26,7 +26,7 @@ const Contact = () => {
   });
 
   return (
-    <div className="contact-container">
+    <div className="main-container">
       <div className="contact-vertical top">
         <div className="title-container">{renderTitle}</div>
       </div>

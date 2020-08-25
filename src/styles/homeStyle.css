@@ -2,44 +2,119 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 100px;
-  color: #293f14;
-  height: 100vh;
-}
-
-.background-tree {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  position: absolute;
-  margin: 0 auto;
-  width: 30%;
-  height: 50%;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  height: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 15px;
+  color: #293f14;
 }
 
-.background-tree img {
+.home-top .bird {
+  position: absolute;
+  visibility: hidden;
+}
+
+.home-top .bird1 {
+  top: 20vh;
+  left: 0px;
+  width: 15%;
+  -webkit-animation: flying 4s 0.1s ease-in-out forwards;
+          animation: flying 4s 0.1s ease-in-out forwards;
+}
+
+.home-top .bird2 {
+  top: 25vh;
+  right: 0px;
+  width: 30%;
+  -webkit-animation: flying2 10s 0.1s ease-in-out forwards;
+          animation: flying2 10s 0.1s ease-in-out forwards;
+}
+
+.bgsmall {
+  position: fixed;
+  top: 23vh;
+  right: 0;
+  width: 60%;
+  margin: 0;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+          animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+}
+
+.bgbig {
+  display: none;
+}
+
+.bottombg-box {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+          animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+  padding-bottom: 0 !important;
+}
+
+.bottombg-box img {
+  max-width: 100%;
+  padding: 0 !important;
+  display: block !important;
+}
+
+.home-bottom {
+  margin-left: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-bottom .home-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.home-bottom .home-left p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.home-bottom .home-right img {
+  display: none;
 }
 
 .button-contactme {
   color: #293f14;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1em;
+  width: 80%;
+  height: 50px;
   margin-top: 30px;
+  border-radius: 5px;
   border: #38a700 3px solid;
   opacity: 0;
   display: block;
@@ -47,24 +122,6 @@
           animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   -webkit-box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
           box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
-}
-
-@-webkit-keyframes shaking {
-  0% {
-    width: 200px;
-  }
-  100% {
-    width: 220px;
-  }
-}
-
-@keyframes shaking {
-  0% {
-    width: 200px;
-  }
-  100% {
-    width: 220px;
-  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -93,55 +150,116 @@
   }
 }
 
-.bird {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  -webkit-animation: flying 7s 1s ease-in-out forwards;
-          animation: flying 7s 1s ease-in-out forwards;
-}
-
-.bird2 {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  -webkit-animation: flying2 3s 1s ease-in-out forwards;
-          animation: flying2 3s 1s ease-in-out forwards;
-}
-
 @-webkit-keyframes flying {
   0% {
-    left: 5%;
+    left: 0px;
+  }
+  5% {
+    visibility: visible;
+    left: 10px;
   }
   100% {
-    left: 58%;
+    left: 60%;
+    visibility: visible;
   }
 }
 
 @keyframes flying {
   0% {
-    left: 5%;
+    left: 0px;
+  }
+  5% {
+    visibility: visible;
+    left: 10px;
   }
   100% {
-    left: 58%;
+    left: 60%;
+    visibility: visible;
   }
 }
 
 @-webkit-keyframes flying2 {
   0% {
     right: 0px;
+    visibility: visible;
   }
   100% {
-    right: 8%;
+    right: 350%;
+    visibility: hidden;
   }
 }
 
 @keyframes flying2 {
   0% {
     right: 0px;
+    visibility: visible;
   }
   100% {
-    right: 8%;
+    right: 350%;
+    visibility: hidden;
   }
 }
-/*# sourceMappingURL=homeStyle.css.map */
+
+@media only screen and (min-width: 768px) {
+  .home-top .bird1 {
+    width: 10%;
+    -webkit-animation: flying 4s 0.1s ease-in-out forwards;
+            animation: flying 4s 0.1s ease-in-out forwards;
+  }
+  .home-top .bird2 {
+    width: 20%;
+    -webkit-animation: flying2 10s 0.1s ease-in-out forwards;
+            animation: flying2 10s 0.1s ease-in-out forwards;
+  }
+  .bottombg-box {
+    display: none;
+  }
+  .bgbig {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: fixed;
+    right: -350px;
+    bottom: 0;
+    width: 100%;
+  }
+  .bgbig img {
+    display: block;
+  }
+  .home-bottom {
+    margin-left: 8%;
+  }
+  .home-bottom .home-left {
+    width: 100%;
+  }
+  .home-bottom .home-left p {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .home-bottom .home-right img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home-bottom {
+    margin-left: 15%;
+  }
+  .home-bottom .home-left {
+    width: 100%;
+  }
+  .home-bottom .home-left p {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .home-bottom .home-right img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=homestyle.css.map */

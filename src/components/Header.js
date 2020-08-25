@@ -1,5 +1,4 @@
 import React from "react";
-import { Nav, Image } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import home from "../images/home.svg";
 import about from "../images/about.svg";
@@ -20,8 +19,14 @@ const Header = () => {
       <a
         href={`https://${getLink[0]}.com/ariannurrahman`}
         key={`imagelink-${index}`}
+        className="navigation-social"
       >
-        <Image src={element} alt="sosmed" key={`header-${index}`} />
+        <img
+          src={element}
+          alt="sosmed"
+          key={`header-${index}`}
+          className="navigation-image-social"
+        />
       </a>
     );
   });
@@ -29,58 +34,39 @@ const Header = () => {
     <div className="header-container">
       <div className="an-container">
         <Link to="/">
-          <Image src={an} alt="an" />
+          <img src={an} alt="an" className="navigation-image" />
         </Link>
       </div>
-      <Nav className="navigation-container ">
+
+      <div className="navigation-container ">
         <NavLink to="/" exact className="navigation-button">
-          <img
-            src={home}
-            alt="#"
-            style={{ width: "40px" }}
-            className="navigation-image"
-          />
+          <img src={home} alt="#" className="navigation-image" />
           <div className="overlay">
             <div className="text">Home</div>
           </div>
         </NavLink>
 
         <NavLink to="/about" exact className="navigation-button">
-          <img
-            src={about}
-            alt="#"
-            style={{ width: "40px" }}
-            className="navigation-image"
-          />
+          <img src={about} alt="#" className="navigation-image" />
           <div className="overlay">
             <div className="text">About</div>
           </div>
         </NavLink>
 
         <NavLink to="/skills" exact className="navigation-button">
-          <img
-            src={skills}
-            alt="#"
-            style={{ width: "40px" }}
-            className="navigation-image"
-          />
+          <img src={skills} alt="#" className="navigation-image" />
           <div className="overlay">
             <div className="text">Skills</div>
           </div>
         </NavLink>
 
         <NavLink to="/contact" exact className="navigation-button">
-          <img
-            src={contact}
-            alt="#"
-            style={{ width: "40px" }}
-            className="navigation-image"
-          />
+          <img src={contact} alt="#" className="navigation-image" />
           <div className="overlay">
             <div className="text">Contact</div>
           </div>
         </NavLink>
-      </Nav>
+      </div>
 
       <div className="sosmed-container">{renderSosmed}</div>
     </div>

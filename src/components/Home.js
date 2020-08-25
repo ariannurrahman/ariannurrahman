@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import Typist from "react-typist";
 
@@ -8,54 +7,45 @@ import "../styles/mainstyle.css";
 import backgroundImage from "../images/tree.svg";
 import birdflying from "../images/gif/birdflying.gif";
 import birdflying2 from "../images/gif/birdflying2.gif";
+import bgsmall from "../images/background/bgsmall.svg";
+import bottombg from "../images/background/bottombg.svg";
 const Home = () => {
   const history = useHistory();
 
   return (
     <div className="home-container">
-      <div className="home-left">
-        <Typist avgTypingDelay={50} startDelay={750} cursor={{ show: false }}>
-          <p className="title-style-home">Hi!</p>
-          <Typist.Delay ms={200} />
-          <p className="title-style-home">
-            I'm An <Typist.Delay ms={200} />
-            <Typist.Backspace count={3} delay={300} />
-            Arian,
-          </p>
-          <Typist.Delay ms={250} />
-          <p className="title-style-home">Front-end Web Developer</p>
-          <Button
-            size="lg"
-            variant="light"
-            style={{
-              backgroundColor: "transparent",
-              fontWeight: "600",
-              width: "200px",
-            }}
-            onClick={() => history.push("/contact")}
-            className="button-contactme"
-          >
-            Contact Me
-          </Button>
-        </Typist>
+      <img src={bgsmall} className="bgsmall" alt="small branch" />
+
+      <div className="home-top">
+        <img src={birdflying} className="bird bird1" alt="firstbird" />
+        <img src={birdflying2} className="bird bird2" alt="secondbird" />
       </div>
-      <div className="home-right">
-        <div className="background-tree">
+      <div className="home-bottom">
+        <div className="home-left">
+          <Typist avgTypingDelay={50} startDelay={100} cursor={{ show: false }}>
+            <p className="title-style-home">Hi!</p>
+            <Typist.Delay ms={50} />
+            <p className="title-style-home">
+              I'm Arian,
+              <Typist.Delay ms={50} />
+            </p>
+            <Typist.Delay ms={50} />
+            <p className="title-style-home">Web Developer</p>
+            <button
+              onClick={() => history.push("/contact")}
+              className="button-contactme"
+            >
+              Contact Me
+            </button>
+          </Typist>
+        </div>
+        <div className="home-right">
           <img src={backgroundImage} alt="" />
         </div>
+      </div>
 
-        <img
-          src={birdflying}
-          style={{ width: "100px" }}
-          className="bird"
-          alt="firstbird"
-        />
-        <img
-          src={birdflying2}
-          style={{ width: "150px" }}
-          className="bird2"
-          alt="secondbird"
-        />
+      <div className="bottombg-box">
+        <img src={bottombg} alt="smartphone bg bottom" />
       </div>
     </div>
   );

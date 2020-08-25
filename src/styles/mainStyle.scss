@@ -8,21 +8,31 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
-  width: 95%;
-  height: 100vh;
-  margin: 0% 5% 0% 5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  margin-top: 10vh;
   background-color: $BGcolor;
   background-image: linear-gradient($BGcolor, $SubBG);
 }
 
-.title-container {
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+.main-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 30vh;
   color: $darkGreen;
 }
+
 .title-style {
   font-size: 75px;
   font-weight: 700;
@@ -35,10 +45,4 @@ body {
     font-weight: 765;
     letter-spacing: 8px;
   }
-}
-
-.title-style-home {
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: 5px;
 }
