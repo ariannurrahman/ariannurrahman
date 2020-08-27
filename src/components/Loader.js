@@ -1,27 +1,12 @@
-// class Foo extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = { loaded: false };
-//   }
+import React from "react";
+import "../styles/loaderStyle.css";
+import an from "../images/an.svg";
+const Loader = () => {
+  return (
+    <div className="loader-container">
+      <img src={an} alt="an design" />
+    </div>
+  );
+};
 
-//   render() {
-//     return (
-//       <div>
-//         {this.state.loaded ? null : (
-//           <div
-//             style={{
-//               background: "red",
-//               height: "400px",
-//               width: "400px",
-//             }}
-//           />
-//         )}
-//         <img
-//           style={this.state.loaded ? {} : { display: "none" }}
-//           src={this.props.src}
-//           onLoad={() => this.setState({ loaded: true })}
-//         />
-//       </div>
-//     );
-//   }
-// }
+export default Loader;

@@ -1,38 +1,57 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import "../styles/skillStyle.css";
 import "../styles/mainstyle.css";
 
+import js from "../images/skill/js.png";
+import html from "../images/skill/html.png";
+import css from "../images/skill/css.png";
+import reactjs from "../images/skill/reactjs.png";
+import git from "../images/skill/git.png";
+import sass from "../images/skill/sass.png";
+
 const Skills = () => {
-  const title = ["S", "k", "i", "l", "l", "s"];
-  const renderTitle = title.map((element) => {
-    return <p className="title-style">{element}</p>;
-  });
-  //
-  const skillList = ["HTML", "CSS/SASS", "JavaScript", "React/Hooks", "Redux"];
-  const skillLevel = [80, 70, 85, 75, 70];
-  const renderSkillSet = skillList.map((element, index) => {
+  const skillList = [
+    "JavaScript",
+    "HTML",
+    "CSS/SASS",
+    "git",
+    "SASS",
+    "React/Hooks",
+  ];
+  const skillIcons = [js, html, css, git, sass, reactjs];
+  const side = ["front", "back", "right", "left", "top", "bottom"];
+
+  const renderSkill = skillList.map((element, index) => {
     return (
-      <div className="outer-bar">
-        <span className="inner-bar" style={{ width: `${skillLevel[index]}%` }}>
-          <span className="progress-bar">{element}</span>
-        </span>
-        <span style={{ float: "right" }}>{`${skillLevel[index]}%`}</span>
+      <div className={`side ${side[index]}`} key={`${skillList}-${index} `}>
+        <img src={skillIcons[index]} alt={skillList + " alt"} />
+        <p>{skillList[index]}</p>
       </div>
     );
   });
+
   return (
-    <Container className="skill-container">
-      <div className="title-container">{renderTitle}</div>
-      <div className="skill-bottom">
-        <div className="skill left">
-          <h1> Im on left</h1>
-        </div>
-        <div className="skill right">
-          <div className="skillbar-container">{renderSkillSet}</div>
+    <div className="skills-container">
+      <div className="skill-title">
+        <div>Skills and Experience</div>
+      </div>
+
+      <div className="skill-desc">
+        <p>
+          Junior of web development with main interest in front end web
+          development
+        </p>
+
+        {/* <p>Currently looking for a job as front end web developer</p> */}
+        <p>Asdasdasd sdasasas sasa a asa as sasas sasd sdas asdasdasdas</p>
+      </div>
+
+      <div className="cube-wrapper">
+        <div className="scene">
+          <div className="cube">{renderSkill}</div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

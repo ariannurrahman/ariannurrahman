@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import home from "../images/home.svg";
 import about from "../images/about.svg";
 import skills from "../images/skills.svg";
@@ -7,17 +7,19 @@ import contact from "../images/contact.svg";
 import "../styles/headerStyle.css";
 
 import linkedin from "../images/linkedin.svg";
-import gmail from "../images/gmail.svg";
 import github from "../images/github.svg";
 import an from "../images/an.svg";
 const Header = () => {
-  const sosmedList = [linkedin, gmail, github];
+  const sosmedStr = ["linkedin", "github"];
+  const sosmedList = [linkedin, github];
   const renderSosmed = sosmedList.map((element, index) => {
-    const splitLink = element.split("/");
-    const getLink = splitLink[3].split(".");
     return (
       <a
-        href={`https://${getLink[0]}.com/ariannurrahman`}
+        href={
+          sosmedStr[index] === "linkedin"
+            ? "https://www.linkedin.com/in/arian-nurrahman/"
+            : "https://github.com/ariannurrahman"
+        }
         key={`imagelink-${index}`}
         className="navigation-social"
       >
@@ -30,43 +32,39 @@ const Header = () => {
       </a>
     );
   });
+  const navText = ["home", "about", "skills", "contact"];
+  const navList = [home, about, skills, contact];
+  const renderNav = navList.map((element, index) => {
+    return (
+      <NavLink
+        to={element === home ? "/" : navText[index]}
+        exact
+        className="navigation-button"
+        key={"navIcon" + index}
+        activeStyle={{ borderBottom: "3px ridge  rgb(56, 167, 0)" }}
+      >
+        <img
+          src={element}
+          alt={element + " alter"}
+          className="navigation-image"
+        />
+        <div className="overlay">
+          <div className="text">
+            {navText[index].charAt(0).toUpperCase() + navText[index].slice(1)}
+          </div>
+        </div>
+      </NavLink>
+    );
+  });
   return (
     <div className="header-container">
       <div className="an-container">
-        <Link to="/">
-          <img src={an} alt="an" className="navigation-image" />
-        </Link>
-      </div>
-
-      <div className="navigation-container ">
-        <NavLink to="/" exact className="navigation-button">
-          <img src={home} alt="#" className="navigation-image" />
-          <div className="overlay">
-            <div className="text">Home</div>
-          </div>
-        </NavLink>
-
-        <NavLink to="/about" exact className="navigation-button">
-          <img src={about} alt="#" className="navigation-image" />
-          <div className="overlay">
-            <div className="text">About</div>
-          </div>
-        </NavLink>
-
-        <NavLink to="/skills" exact className="navigation-button">
-          <img src={skills} alt="#" className="navigation-image" />
-          <div className="overlay">
-            <div className="text">Skills</div>
-          </div>
-        </NavLink>
-
-        <NavLink to="/contact" exact className="navigation-button">
-          <img src={contact} alt="#" className="navigation-image" />
-          <div className="overlay">
-            <div className="text">Contact</div>
-          </div>
+        <NavLink to="/" exact>
+          <img src={an} alt="an" className="navigation-image skip-link" />
         </NavLink>
       </div>
+
+      <div className="navigation-container ">{renderNav}</div>
 
       <div className="sosmed-container">{renderSosmed}</div>
     </div>

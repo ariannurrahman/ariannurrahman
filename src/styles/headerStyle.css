@@ -120,6 +120,9 @@
     margin: 5px 10px;
   }
   .header-container .an-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
