@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/skillStyle.css";
 import "../styles/mainstyle.css";
 
@@ -10,22 +10,16 @@ import git from "../images/skill/git.png";
 import sass from "../images/skill/sass.png";
 
 const Skills = () => {
-  const skillList = [
-    "JavaScript",
-    "HTML",
-    "CSS/SASS",
-    "git",
-    "SASS",
-    "React/Hooks",
-  ];
+  const [play, setPlay] = useState("true");
+
+  const skillList = ["JavaScript", "HTML", "CSS", "git", "SASS", "React"];
   const skillIcons = [js, html, css, git, sass, reactjs];
   const side = ["front", "back", "right", "left", "top", "bottom"];
 
   const renderSkill = skillList.map((element, index) => {
     return (
       <div className={`side ${side[index]}`} key={`${skillList}-${index} `}>
-        <img src={skillIcons[index]} alt={skillList + " alt"} />
-        <p>{skillList[index]}</p>
+        <img src={skillIcons[index]} alt={skillList[index] + " alt"} />
       </div>
     );
   });
@@ -33,24 +27,37 @@ const Skills = () => {
   return (
     <div className="skills-container">
       <div className="skill-title">
-        <div>Skills and Experience</div>
+        <div>Skills and Experiences</div>
       </div>
 
       <div className="skill-desc">
         <p>
-          Junior of web development with main interest in front end web
-          development
+          I use HTML, CSS, and JavaScript to produce responsive websites and web
+          apps that provide users the best and most appropriate experience
+          suited to their device and browser.
         </p>
 
         {/* <p>Currently looking for a job as front end web developer</p> */}
-        <p>Asdasdasd sdasasas sasa a asa as sasas sasd sdas asdasdasdas</p>
+        <p>
+          I also have 1 year experience with Raspberry Pi, for creating
+          real-time sensor. Visit my{" "}
+          <a href="https://www.linkedin.com/in/arian-nurrahman/">LinkedIn </a>
+          for more details.
+        </p>
       </div>
 
       <div className="cube-wrapper">
         <div className="scene">
-          <div className="cube">{renderSkill}</div>
+          <div
+            className={play === true ? "cube" : "cube paused"}
+            onClick={() => setPlay(!play)}
+          >
+            {renderSkill}
+          </div>
         </div>
       </div>
+
+      <div className="skill-design"></div>
     </div>
   );
 };

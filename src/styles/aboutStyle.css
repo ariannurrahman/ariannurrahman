@@ -1,6 +1,7 @@
 .about-container {
   height: 100%;
-  width: 95%;
+  width: 85%;
+  margin: 100px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,18 +19,18 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin: 3%;
+  border-radius: 5%;
 }
 
 .about-top {
-  width: 80%;
+  width: 100%;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: row;
-      -ms-flex: row nowrap;
-          flex: row nowrap;
+  -webkit-box-flex: column;
+      -ms-flex: column nowrap;
+          flex: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -52,6 +53,7 @@
 }
 
 .about-bottom {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,68 +61,18 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.about-bottom .bottom-left img {
   width: 100%;
-  margin: auto;
 }
 
-.about-bottom .about-wrapper-left {
-  display: none;
-}
-
-.box-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  height: 100%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-}
-
-.box-container .box-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: transparent;
-  border-bottom: #38a700 2px solid;
-  width: 100%;
-  height: 100%;
-  margin: 10px 5px;
-  padding: 3px;
-}
-
-.box-container .box-wrapper img {
-  height: 35px;
-  width: 35px;
-  margin: auto;
-  display: block;
-  border: 2px solid #38a700;
-  padding: 3px;
-  border-radius: 5%;
-}
-
-.box-container .box-wrapper p {
-  text-align: end;
+.about-bottom .bottom-right {
+  text-align: right;
 }
 /*# sourceMappingURL=aboutStyle.css.map */
