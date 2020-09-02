@@ -6,8 +6,8 @@ const Home = React.lazy(() => import("./Home"));
 const About = React.lazy(() => import("./About"));
 const Header = React.lazy(() => import("./Header"));
 const Skills = React.lazy(() => import("./Skills"));
+const Contact = React.lazy(() => import("./Contact"));
 
-// import Contact from "./Contact";
 const App = () => {
   return (
     <div className="ui-container">
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/skills" exact component={Skills} />
-          {/* <Route path="/contact" exact component={Contact} /> */}
+          <Route path="/contact" exact component={Contact} />
         </Suspense>
       </BrowserRouter>
     </div>

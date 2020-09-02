@@ -49,7 +49,8 @@ const Skills = () => {
       <div className="cube-wrapper">
         <div className="scene">
           <div
-            className={play === true ? "cube" : "cube paused"}
+            // className={play === true ? "cube" : "cube paused"}
+            className="cube"
             onClick={() => setPlay(!play)}
           >
             {renderSkill}

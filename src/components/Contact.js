@@ -1,9 +1,7 @@
-import React from "react";
-import { Form, Col, Button } from "react-bootstrap";
-
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/mainstyle.css";
 import "../styles/contactStyle.css";
-
+import mapboxgl from "mapbox-gl";
 import linkedin from "../images/linkedin.svg";
 import gmail from "../images/gmail.svg";
 import github from "../images/github.svg";
@@ -11,58 +9,47 @@ import whatsapp from "../images/whatsapp.svg";
 
 const Contact = () => {
   const iconList = [whatsapp, linkedin, gmail, github];
-  const title = ["C", "o", "n", "t", "a", "c", "t", "M", "e"];
+  const [map, setMap] = useState(null);
+  const mapContainer = useRef(null);
 
-  const renderIcon = iconList.map((element, index) => {
-    return (
-      <div style={{ width: "100px", margin: "30px" }}>
-        <img src={element} alt="" />
-      </div>
-    );
-  });
+  useEffect(() => {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiYXJpYW5kcm9pZCIsImEiOiJja2FiM2VhbTEwdXBoMnJqcDRndW94YmwxIn0.lOrYJvwhR54494WrMWNWUA";
+    const initializeMap = ({ setMap, mapContainer }) => {
+      const map = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
+        center: [107.64809, -6.964609],
+        zoom: 2,
+        anchor: "center",
+      });
+      let marker = new mapboxgl.Marker()
+        .setLngLat([107.64809, -6.964609])
+        .addTo(map);
 
-  const renderTitle = title.map((element) => {
-    return <p className="title-style">{element}</p>;
-  });
+      map.on("load", () => {
+        setMap(map);
+        map.resize();
+      });
+    };
+
+    if (!map) initializeMap({ setMap, mapContainer });
+  }, [map]);
 
   return (
-    <div className="main-container">
-      <div className="contact-vertical top">
-        <div className="title-container">{renderTitle}</div>
+    <div className="contact-container">
+      <div className="contact-top">
+        <div className="contact-title">Contact Me</div>
+        <div
+          // className="contact-mapbox"
+          style={{ width: "300px", height: "300px" }}
+          id="mapboxgl"
+          ref={(el) => (mapContainer.current = el)}
+        ></div>
       </div>
-
-      <div className="contact-vertical bottom">
-        <div className="contact left">
-          <Form>
-            <Form.Row>
-              <Form.Group as={Col} controlId="formGridname">
-                <Form.Label>First name</Form.Label>
-                <Form.Control type="email" placeholder="First Name" />
-              </Form.Group>
-              <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Enter Email" />
-              </Form.Group>
-            </Form.Row>
-
-            <Form.Group controlId="formGridSubject">
-              <Form.Label>Subject</Form.Label>
-              <Form.Control placeholder="Subject" />
-            </Form.Group>
-
-            <Form.Group id="formGridCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </div>
-        {/*  */}
-        <div className="contact right">
-          <div className="icon-container">{renderIcon}</div>
-        </div>
+      <div className="contact-bottom">
+        <div className="contact-bottom-top"></div>
+        <div className="contact-bottom-bottom"></div>
       </div>
     </div>
   );

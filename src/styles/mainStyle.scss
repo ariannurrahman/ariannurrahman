@@ -23,6 +23,15 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    margin-left: 10vh;
+    background-color: $BGcolor;
+    background-image: linear-gradient($BGcolor, $SubBG);
+  }
 }
 
 .main-container {

@@ -9,9 +9,12 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
+
   height: 90vh;
   width: 80%;
-  margin: 0 auto;
+
+  margin: 1vh auto;
+
   color: $darkGreen;
 }
 
@@ -25,8 +28,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   letter-spacing: 1px;
 }
 .skill-desc {
-  font-weight: 500;
   font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: right;
 }
 .cube-wrapper {
   margin-top: 50%;

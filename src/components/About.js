@@ -1,41 +1,52 @@
 import React from "react";
-
 import "../styles/aboutStyle.css";
 import "../styles/mainstyle.css";
-import clickaway from "../images/clickaway.svg";
-import coop from "../images/coop.svg";
-import learn from "../images/learn.svg";
-import tea from "../images/tea.svg";
-import organized from "../images/organized.svg";
+import arian from "../images/arian.jpg";
+
+import linkedin from "../images/linkedin.svg";
+import gmail from "../images/gmail.svg";
+import github from "../images/github.svg";
+import contact from "../images/contact.svg";
+import { useHistory } from "react-router-dom";
 
 const About = () => {
-  const image = [clickaway, coop, learn];
+  const contactList = [linkedin, gmail, github];
 
-  const imageDesc = [
-    " I enjoy getting to know a business, its goals, and how I can best apply myself to make sure your website succeeds. ",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-  ];
+  const renderContact = contactList.map((element, index) => {
+    return (
+      <div className="contact-wrapper" key={element[index] + " key"}>
+        <img src={element} alt={`${element[index]}-key`} />
+      </div>
+    );
+  });
+
+  const history = useHistory();
+  const onClickHandler = (event) => {
+    event.preventDefault();
+    history.push("/contact");
+  };
 
   return (
     <div className="about-container">
-      <div className="about-top">
-        <p>About Me</p>
+      <div className="about-top">About Me</div>
+      <div className="bottom-left">
+        <img src={arian} alt="Me on grass" />
       </div>
-      <div className="about-bottom">
-        <div className="bottom-left">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Person_icon_BLACK-01.svg/1200px-Person_icon_BLACK-01.svg.png" />
-        </div>
-        <div className="bottom-right">
-          <h2>
-            <strong>Hi! I'm Arian</strong>
-          </h2>
-          <h4>
-            I describe myself as a passionate developer who loves coding, open
-            source, and the web platform
-          </h4>
-        </div>
+      <div className="top-text">Hi! I'm Arian</div>
+      <div className="bottom-text">
+        I describe myself as a passionate developer who loves coding, open
+        source, and the web platform.
       </div>
+
+      <div className="about-contact" onClick={onClickHandler}>
+        <img src={contact} alt="contact me" />
+      </div>
+
+      <div className="bottom-quote">
+        "Consistency and discipline is the key to learn"
+      </div>
+
+      <div className="footer-contact">{renderContact}</div>
     </div>
   );
 };
