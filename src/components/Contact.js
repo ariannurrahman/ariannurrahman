@@ -2,10 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import "../styles/mainstyle.css";
 import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
+
 import linkedin from "../images/linkedin.svg";
 import gmail from "../images/gmail.svg";
 import github from "../images/github.svg";
 import whatsapp from "../images/whatsapp.svg";
+
+const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
   const iconList = [whatsapp, linkedin, gmail, github];
@@ -20,7 +23,7 @@ const Contact = () => {
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
         center: [107.64809, -6.964609],
-        zoom: 2,
+        zoom: 5,
         anchor: "center",
       });
       let marker = new mapboxgl.Marker()
@@ -42,14 +45,33 @@ const Contact = () => {
         <div className="contact-title">Contact Me</div>
         <div
           // className="contact-mapbox"
-          style={{ width: "300px", height: "300px" }}
+          style={{ width: "100%", height: "150px" }}
           id="mapboxgl"
           ref={(el) => (mapContainer.current = el)}
         ></div>
       </div>
       <div className="contact-bottom">
-        <div className="contact-bottom-top"></div>
-        <div className="contact-bottom-bottom"></div>
+        <div className="contact-bottom__top">
+          <form id="contact" autoComplete="off">
+            <div className="half-top">
+              <input type="text" placeholder="Name"></input>
+              <input type="email" placeholder="Email"></input>
+            </div>
+            <div className="half-bottom">
+              <input type="text" placeholder="Subject"></input>
+              <textarea
+                type="text"
+                placeholder="Message"
+                id="contact-textarea"
+              ></textarea>
+              <input type="submit" placeholder="Submit"></input>
+            </div>
+          </form>
+        </div>
+        <div className="contact-bottom__bottom"></div>
+      </div>
+      <div className="footer-container">
+        <Footer />
       </div>
     </div>
   );

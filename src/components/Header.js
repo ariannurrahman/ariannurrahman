@@ -41,7 +41,7 @@ const Header = () => {
         exact
         className="navigation-button"
         key={"navIcon" + index}
-        activeStyle={{ borderBottom: "3px ridge  rgb(56, 167, 0)" }}
+        activeStyle={{ borderBottom: "3px ridge rgb(56, 167, 0)" }}
       >
         <img
           src={element}

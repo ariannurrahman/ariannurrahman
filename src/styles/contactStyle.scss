@@ -1,11 +1,18 @@
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
 .contact-container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   height: 80vh;
   width: 90%;
   margin: 0 auto;
+  color: $darkGreen;
 }
 
 .contact-top {
@@ -14,8 +21,10 @@
   align-items: center;
   flex-flow: column nowrap;
   width: 100%;
+
   .contact-title {
     width: 100%;
+    margin: 5% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,5 +35,47 @@
 
 .contact-bottom {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 5% auto;
+  justify-content: center;
+  align-items: center;
+  .contact-bottom__top {
+    form {
+      div > input,
+      textarea {
+        height: 2vh;
+        width: 80vw;
+        margin: 1vh;
+        padding: 10px;
+        border: 2px solid $borderColor;
+        border-radius: 5px;
+        background-color: whitesmoke;
+      }
+      div > input[type="submit"] {
+        width: 50%;
+        padding: 0px;
+        height: 5vh;
+      }
+      .half-top {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+      .half-bottom {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        #contact-textarea {
+          height: 15vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    display: none;
+  }
 }

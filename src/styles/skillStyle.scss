@@ -9,29 +9,30 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
-
   height: 90vh;
+  margin: 0 auto;
   width: 80%;
-
-  margin: 1vh auto;
-
   color: $darkGreen;
 }
-
 .skill-title {
-  margin-top: 10%;
+  margin: 5% auto;
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
-  font-size: 2em;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 2em;
 }
 .skill-desc {
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 1px;
-  text-align: right;
+  #skp1 {
+    text-align: left;
+  }
+  #skp2 {
+    text-align: right;
+  }
 }
 .cube-wrapper {
   margin-top: 50%;
@@ -50,10 +51,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   transform-style: preserve-3d;
   transform: translateZ(-50px) rotateX(0deg) rotateY(0);
   animation: cubbling 5s linear 0.5s infinite;
-}
-
-.paused {
-  animation-play-state: paused;
 }
 
 @keyframes cubbling {
@@ -87,6 +84,29 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
     width: 50%;
   }
 }
+
+.paused {
+  animation: startover 3s;
+}
+
+@keyframes startover {
+  to {
+    transform: scale(0.6);
+  }
+}
+// @keyframes startover {
+//   0% {
+//     transform: rotateX(90deg) rotateY(90);
+//   }
+
+//   50% {
+//     transform: rotateX(45deg) rotateY(45deg);
+//   }
+//   to {
+//     transform: rotateX(0deg) rotateY(0);
+//   }
+// }
+
 .back {
   transform: translateZ(-50px);
 }

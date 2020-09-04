@@ -10,7 +10,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  top: 0;
   width: 80%;
   height: 80vh;
   margin: 0 auto;
@@ -18,17 +17,14 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   overflow-x: hidden;
 }
 
-.about-top {
+.about-title {
   width: 100%;
-  height: 10%;
+  margin: 5% auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 700;
   font-size: 2em;
-  .title-style {
-    margin: 0 1px;
-  }
 }
 
 .bottom-left {
@@ -101,41 +97,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-family: "Courgette", cursive;
 }
 
-.footer-contact {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: row nowrap;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  margin: 0 auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  .contact-wrapper {
-    margin: 0px 20px;
-    max-width: 40px;
-    animation: contact 2s linear 2s infinite;
-
-    img {
-      border-radius: 5px;
-      border: 3px solid $borderColor;
-      transform: rotateZ(45deg);
-      width: 100%;
-      opacity: 0.8;
-    }
-  }
-}
-
-@keyframes contact {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
 @keyframes slidefromleft {
   100% {
     transform: translateX(0%);

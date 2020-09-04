@@ -13,30 +13,38 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   height: 90vh;
+  margin: 0 auto;
   width: 80%;
-  margin: 1vh auto;
   color: #293f14;
 }
 
 .skill-title {
-  margin-top: 10%;
+  margin: 5% auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  font-size: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 2em;
 }
 
 .skill-desc {
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.skill-desc #skp1 {
+  text-align: left;
+}
+
+.skill-desc #skp2 {
   text-align: right;
 }
 
@@ -68,11 +76,6 @@
           transform: translateZ(-50px) rotateX(0deg) rotateY(0);
   -webkit-animation: cubbling 5s linear 0.5s infinite;
           animation: cubbling 5s linear 0.5s infinite;
-}
-
-.paused {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 
 @-webkit-keyframes cubbling {
@@ -131,6 +134,25 @@
 .side img {
   display: block;
   width: 50%;
+}
+
+.paused {
+  -webkit-animation: startover 3s;
+          animation: startover 3s;
+}
+
+@-webkit-keyframes startover {
+  to {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes startover {
+  to {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
 }
 
 .back {

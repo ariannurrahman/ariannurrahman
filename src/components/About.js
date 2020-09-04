@@ -2,24 +2,11 @@ import React from "react";
 import "../styles/aboutStyle.css";
 import "../styles/mainstyle.css";
 import arian from "../images/arian.jpg";
-
-import linkedin from "../images/linkedin.svg";
-import gmail from "../images/gmail.svg";
-import github from "../images/github.svg";
 import contact from "../images/contact.svg";
 import { useHistory } from "react-router-dom";
+const Footer = React.lazy(() => import("./Footer"));
 
 const About = () => {
-  const contactList = [linkedin, gmail, github];
-
-  const renderContact = contactList.map((element, index) => {
-    return (
-      <div className="contact-wrapper" key={element[index] + " key"}>
-        <img src={element} alt={`${element[index]}-key`} />
-      </div>
-    );
-  });
-
   const history = useHistory();
   const onClickHandler = (event) => {
     event.preventDefault();
@@ -28,7 +15,7 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <div className="about-top">About Me</div>
+      <div className="about-title">About Me</div>
       <div className="bottom-left">
         <img src={arian} alt="Me on grass" />
       </div>
@@ -45,8 +32,7 @@ const About = () => {
       <div className="bottom-quote">
         "Consistency and discipline is the key to learn"
       </div>
-
-      <div className="footer-contact">{renderContact}</div>
+      <Footer />
     </div>
   );
 };

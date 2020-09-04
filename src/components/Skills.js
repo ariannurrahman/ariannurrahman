@@ -10,7 +10,7 @@ import git from "../images/skill/git.png";
 import sass from "../images/skill/sass.png";
 
 const Skills = () => {
-  const [play, setPlay] = useState("true");
+  const [play, setPlay] = useState(true);
 
   const skillList = ["JavaScript", "HTML", "CSS", "git", "SASS", "React"];
   const skillIcons = [js, html, css, git, sass, reactjs];
@@ -18,7 +18,15 @@ const Skills = () => {
 
   const renderSkill = skillList.map((element, index) => {
     return (
-      <div className={`side ${side[index]}`} key={`${skillList}-${index} `}>
+      <div
+        // className={`${
+        //   play === true
+        //     ? "side " + side[index]
+        //     : "side " + side[index] + " paused"
+        // }`}
+        className={`side + ${side[index]}`}
+        key={`${skillList}-${index}`}
+      >
         <img src={skillIcons[index]} alt={skillList[index] + " alt"} />
       </div>
     );
@@ -31,14 +39,14 @@ const Skills = () => {
       </div>
 
       <div className="skill-desc">
-        <p>
+        <p id="skp1">
           I use HTML, CSS, and JavaScript to produce responsive websites and web
           apps that provide users the best and most appropriate experience
           suited to their device and browser.
         </p>
 
         {/* <p>Currently looking for a job as front end web developer</p> */}
-        <p>
+        <p id="skp2">
           I also have 1 year experience with Raspberry Pi, for creating
           real-time sensor. Visit my{" "}
           <a href="https://www.linkedin.com/in/arian-nurrahman/">LinkedIn </a>
@@ -49,8 +57,8 @@ const Skills = () => {
       <div className="cube-wrapper">
         <div className="scene">
           <div
-            // className={play === true ? "cube" : "cube paused"}
-            className="cube"
+            className={play === true ? "cube" : "cube paused"}
+            // className="cube"
             onClick={() => setPlay(!play)}
           >
             {renderSkill}
