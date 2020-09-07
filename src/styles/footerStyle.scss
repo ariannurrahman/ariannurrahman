@@ -1,3 +1,9 @@
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
 .footer-contact {
   display: flex;
   justify-content: center;
@@ -10,26 +16,29 @@
   bottom: 0;
   left: 0;
   right: 0;
+
   .contact-wrapper {
     margin: 0px 20px;
     max-width: 40px;
-    animation: contact 2s linear 2s infinite;
 
     img {
       border-radius: 5px;
       border: 3px solid $borderColor;
-      transform: rotateZ(45deg);
+
       width: 100%;
       opacity: 0.8;
     }
   }
 }
 
-@keyframes contact {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
+// @media only screen and (min-width: 768px) {
+//   .footer-contact {
+//     display: none;
+//   }
+// }
+
+// @media only screen and (min-width: 1024px) {
+//   .footer-contact {
+//     display: none;
+//   }
+// }

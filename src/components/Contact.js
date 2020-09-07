@@ -3,15 +3,9 @@ import "../styles/mainstyle.css";
 import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 
-import linkedin from "../images/linkedin.svg";
-import gmail from "../images/gmail.svg";
-import github from "../images/github.svg";
-import whatsapp from "../images/whatsapp.svg";
-
 const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
-  const iconList = [whatsapp, linkedin, gmail, github];
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
 
@@ -68,10 +62,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="contact-bottom__bottom"></div>
-      </div>
-      <div className="footer-container">
-        <Footer />
+        <div className="contact-bottom__bottom">
+          <Footer />
+        </div>
       </div>
     </div>
   );
