@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/aboutStyle.css";
 import "../styles/mainstyle.css";
-import arian from "../images/arian.jpg";
+import arian from "../images/arian.jpeg";
 import contact from "../images/contact.svg";
 import { useHistory } from "react-router-dom";
 const Footer = React.lazy(() => import("./Footer"));
@@ -32,7 +32,6 @@ const About = () => {
       <div className="bottom-quote">
         "Consistency and discipline is the key to learn"
       </div>
-      <Footer />
     </div>
   );
 };

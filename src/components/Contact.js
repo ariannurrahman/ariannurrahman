@@ -35,36 +35,36 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <div className="contact-top">
-        <div className="contact-title">Contact Me</div>
-        <div
-          // className="contact-mapbox"
-          style={{ width: "100%", height: "150px" }}
-          id="mapboxgl"
-          ref={(el) => (mapContainer.current = el)}
-        ></div>
-      </div>
-      <div className="contact-bottom">
-        <div className="contact-bottom__top">
-          <form id="contact" autoComplete="off">
-            <div className="half-top">
-              <input type="text" placeholder="Name"></input>
-              <input type="email" placeholder="Email"></input>
-            </div>
-            <div className="half-bottom">
-              <input type="text" placeholder="Subject"></input>
-              <textarea
-                type="text"
-                placeholder="Message"
-                id="contact-textarea"
-              ></textarea>
-              <input type="submit" placeholder="Submit"></input>
-            </div>
-          </form>
+      <div className="contact-title">Contact Me</div>
+      <div className="contact-map-form">
+        <div className="contact-top">
+          <div
+            // className="contact-mapbox"
+
+            id="mapboxgl"
+            ref={(el) => (mapContainer.current = el)}
+          ></div>
         </div>
-        <div className="contact-bottom__bottom">
-          <Footer />
+        <div className="contact-bottom">
+          <div className="contact-bottom__top">
+            <form id="contact" autoComplete="off">
+              <div className="half-top">
+                <input type="text" placeholder="Name"></input>
+                <input type="email" placeholder="Email"></input>
+              </div>
+              <div className="half-bottom">
+                <input type="text" placeholder="Subject"></input>
+                <textarea
+                  type="text"
+                  placeholder="Message"
+                  id="contact-textarea"
+                ></textarea>
+                <input type="submit" placeholder="Submit"></input>
+              </div>
+            </form>
+          </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

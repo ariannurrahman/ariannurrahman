@@ -9,67 +9,96 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  width: 80%;
   height: 80vh;
-  width: 90%;
   margin: 0 auto;
   color: $darkGreen;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
 }
 
-.contact-top {
+.contact-title {
+  margin: 5% auto;
+  font-weight: 700;
+  font-size: 2em;
+}
+.contact-map-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-flow: column nowrap;
-  width: 100%;
-
-  .contact-title {
-    width: 100%;
-    margin: 5% auto;
+  .contact-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
-    font-size: 2em;
+    flex-flow: column nowrap;
+    width: 100%;
+    #mapboxgl {
+      width: 100%;
+      height: 15vh;
+    }
+  }
+
+  .contact-bottom {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin: 5% auto;
+    justify-content: center;
+    align-items: center;
+    .contact-bottom__top {
+      form {
+        div > input,
+        textarea {
+          height: 40px;
+          width: 100%;
+          margin-bottom: 1vh;
+          border: 2px solid $borderColor;
+          border-radius: 5px;
+          background-color: whitesmoke;
+          box-sizing: border-box;
+          padding: 10px;
+        }
+        div > input[type="submit"] {
+          width: 70%;
+          padding: 0px;
+          height: 40px;
+        }
+
+        .half-bottom {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          #contact-textarea {
+            height: 15vh;
+            max-height: 20vh;
+            max-width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
-.contact-bottom {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  margin: 5% auto;
-  justify-content: center;
-  align-items: center;
-  .contact-bottom__top {
-    form {
-      div > input,
-      textarea {
-        height: 2vh;
-        width: 80vw;
-        margin: 1vh;
-        padding: 10px;
-        border: 2px solid $borderColor;
-        border-radius: 5px;
-        background-color: whitesmoke;
+@media only screen and (min-width: 768px) {
+  .contact-map-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    .contact-top {
+      background-color: $actColor;
+      height: 100%;
+      margin: 0 5px;
+      #mapboxgl {
+        height: 100%;
       }
-      div > input[type="submit"] {
-        width: 50%;
-        padding: 0px;
-        height: 5vh;
-      }
-      .half-top {
-        display: flex;
-        flex-flow: column nowrap;
-      }
-      .half-bottom {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        #contact-textarea {
-          height: 15vh;
-        }
-      }
+    }
+
+    .contact-bottom {
+      height: 100%;
+      margin: 0 5px;
     }
   }
 }

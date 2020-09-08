@@ -12,46 +12,55 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  width: 80%;
   height: 80vh;
-  width: 90%;
   margin: 0 auto;
   color: #293f14;
+  overflow-x: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.contact-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  width: 100%;
-}
-
-.contact-top .contact-title {
-  width: 100%;
+.contact-title {
   margin: 5% auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 700;
   font-size: 2em;
 }
 
-.contact-bottom {
+.contact-map-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.contact-map-form .contact-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+}
+
+.contact-map-form .contact-top #mapboxgl {
+  width: 100%;
+  height: 15vh;
+}
+
+.contact-map-form .contact-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,34 +78,26 @@
           align-items: center;
 }
 
-.contact-bottom .contact-bottom__top form div > input,
-.contact-bottom .contact-bottom__top form textarea {
-  height: 2vh;
-  width: 80vw;
-  margin: 1vh;
-  padding: 10px;
+.contact-map-form .contact-bottom .contact-bottom__top form div > input,
+.contact-map-form .contact-bottom .contact-bottom__top form textarea {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 1vh;
   border: 2px solid #38a700;
   border-radius: 5px;
   background-color: whitesmoke;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
 }
 
-.contact-bottom .contact-bottom__top form div > input[type="submit"] {
-  width: 50%;
+.contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
+  width: 70%;
   padding: 0px;
-  height: 5vh;
+  height: 40px;
 }
 
-.contact-bottom .contact-bottom__top form .half-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-}
-
-.contact-bottom .contact-bottom__top form .half-bottom {
+.contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +113,38 @@
           align-items: center;
 }
 
-.contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
+.contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
   height: 15vh;
+  max-height: 20vh;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-map-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 80vh;
+  }
+  .contact-map-form .contact-top {
+    background-color: #386c0b;
+    height: 100%;
+    margin: 0 5px;
+  }
+  .contact-map-form .contact-top #mapboxgl {
+    height: 100%;
+  }
+  .contact-map-form .contact-bottom {
+    height: 100%;
+    margin: 0 5px;
+  }
 }
 /*# sourceMappingURL=contactStyle.css.map */

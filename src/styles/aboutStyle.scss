@@ -7,22 +7,18 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 .about-container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   width: 80%;
-  height: 80vh;
+  height: 90vh;
   margin: 0 auto;
   color: $darkGreen;
   overflow-x: hidden;
 }
 
 .about-title {
-  width: 100%;
   margin: 5% auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 700;
   font-size: 2em;
 }
@@ -34,6 +30,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
   img {
     width: 90%;
+
     max-width: 350px;
     border-radius: 3%;
     border: 3px solid $borderColor;
@@ -42,7 +39,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
 .top-text {
   display: flex;
-  height: 10%;
+  margin: 20px;
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
@@ -50,7 +47,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-size: 4vh;
   transform: translateX(-100%);
   position: relative;
-  animation: slidefromright 0.75s forwards;
+  animation: slidefromright 0.75s forwards ease;
 }
 
 .bottom-text {
@@ -64,7 +61,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-size: 1.1em;
   transform: translateX(-100%);
   position: relative;
-  animation: slidefromleft 1s forwards 0.5s;
+  animation: slidefromleft 1s forwards 0.5s ease;
 }
 
 .about-contact {
