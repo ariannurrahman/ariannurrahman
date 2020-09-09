@@ -28,7 +28,16 @@
   font-size: 2em;
 }
 
+.contact-greeting {
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 5%;
+}
+
 .contact-map-form {
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +94,7 @@
   margin-bottom: 1vh;
   border: 2px solid #38a700;
   border-radius: 5px;
-  background-color: whitesmoke;
+  background-color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
@@ -121,18 +130,12 @@
 
 @media only screen and (min-width: 768px) {
   .contact-map-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
   }
   .contact-map-form .contact-top {
     background-color: #386c0b;
@@ -144,7 +147,39 @@
   }
   .contact-map-form .contact-bottom {
     height: 100%;
-    margin: 0 5px;
+    margin: 0 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .contact-map-form .contact-bottom .contact-bottom__top form div > input,
+  .contact-map-form .contact-bottom .contact-bottom__top form textarea {
+    height: 50px;
+    margin-bottom: 2vh;
+  }
+  .contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
+    height: 50px;
+    border-radius: 10px;
+  }
+  .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
+    height: 20vh;
+    max-height: 20vh;
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=contactStyle.css.map */

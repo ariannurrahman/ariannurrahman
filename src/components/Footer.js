@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/mainstyle.css";
 import "../styles/footerStyle.css";
 import gmail from "../images/gmail.svg";
@@ -8,7 +8,6 @@ import gsap from "gsap";
 
 const Footer = () => {
   const contactList = [linkedin, gmail, github];
-  const [play, isPlay] = useState("null");
 
   useEffect(() => {
     gsap.to(".contact-wrapper", {
@@ -22,7 +21,7 @@ const Footer = () => {
       opacity: 1,
     });
   });
-  console.log(gsap);
+
   const renderContact = contactList.map((element, index) => {
     return (
       <div className="contact-wrapper" key={element[index] + " key"}>

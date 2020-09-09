@@ -17,6 +17,7 @@ body {
   margin-top: 10vh;
   background-color: $BGcolor;
   background-image: linear-gradient($BGcolor, $SubBG);
+  overflow: hidden;
 }
 
 .testis {

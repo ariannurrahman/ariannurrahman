@@ -38,18 +38,11 @@
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 1px;
-}
-
-.skill-desc #skp1 {
   text-align: left;
 }
 
-.skill-desc #skp2 {
-  text-align: right;
-}
-
 .cube-wrapper {
-  margin-top: 50%;
+  margin: auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

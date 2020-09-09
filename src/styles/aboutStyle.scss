@@ -59,9 +59,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   width: 100%;
   font-weight: 600;
   font-size: 1.1em;
-  transform: translateX(-100%);
   position: relative;
-  animation: slidefromleft 1s forwards 0.5s ease;
 }
 
 .about-contact {
@@ -71,8 +69,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   align-content: center;
   flex-flow: column nowrap;
   height: 10vh;
-  opacity: 0;
-  animation: fadeIn 0.5s 1.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   max-width: 60px;
   img {
     height: 100%;
@@ -88,31 +84,8 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   text-align: center;
   width: 100%;
   font-size: 1.5em;
-  transform: translateX(-100%);
   position: relative;
-  animation: slidefromright 0.5s forwards 1.25s;
   font-family: "Courgette", cursive;
-}
-
-@keyframes slidefromleft {
-  100% {
-    transform: translateX(0%);
-  }
-}
-@keyframes slidefromright {
-  100% {
-    transform: translateX(0%);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @media only screen and (min-width: 768px) {

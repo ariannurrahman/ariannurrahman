@@ -16,25 +16,16 @@
   color: #293f14;
 }
 
-.home-top .bird {
+.sun {
+  display: block;
   position: absolute;
-  opacity: 0;
-  top: 20vh;
-  left: 60%;
-  width: 15%;
-  -webkit-animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-          animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+  top: 12vh;
+  right: 6%;
+  width: 30%;
 }
 
 .bgsmall {
-  position: fixed;
-  top: 23vh;
-  right: 0;
-  width: 60%;
-  margin: 0;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-          animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+  display: none;
 }
 
 .bottombg-box {
@@ -43,14 +34,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-          animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-  padding-bottom: 0 !important;
 }
 
 .bottombg-box img {
-  max-width: 100%;
+  height: 100%;
   padding: 0 !important;
   display: block !important;
 }
@@ -73,18 +60,19 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
 }
 
 .home-bottom .home-left p {
   font-weight: 700;
   font-size: 2rem;
+  margin-bottom: 1px;
 }
 
 .home-bottom .home-right img {
@@ -101,77 +89,29 @@
   margin-top: 30px;
   border-radius: 5px;
   border: #38a700 3px solid;
-  opacity: 0;
   display: block;
-  -webkit-animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-          animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   -webkit-box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
           box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@-webkit-keyframes flying {
-  0% {
-    left: 0px;
-  }
-  5% {
-    visibility: visible;
-    left: 10px;
-  }
-  100% {
-    left: 60%;
-    visibility: visible;
-  }
-}
-
-@keyframes flying {
-  0% {
-    left: 0px;
-  }
-  5% {
-    visibility: visible;
-    left: 10px;
-  }
-  100% {
-    left: 60%;
-    visibility: visible;
-  }
-}
-
 @media only screen and (min-width: 768px) {
-  .home-top .bird {
-    width: 10%;
+  .bgsmall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    margin: 0;
   }
-  .bottombg-box {
-    display: none;
+  .sun {
+    width: 20%;
   }
   .bgsmall {
-    top: 15vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
   .home-bottom {
     margin-left: 12%;
@@ -183,6 +123,28 @@
     font-weight: 700;
     font-size: 2.5rem;
   }
+  .bottombg-box {
+    z-index: 10;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    background-image: url("../images//background//bottombg.svg");
+    width: 100vw;
+    height: 15vh;
+  }
+  .bottombg-box img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -192,6 +154,9 @@
   .home-bottom .home-left p {
     font-weight: 700;
     font-size: 3rem;
+  }
+  .bottombg-box {
+    height: 15vh;
   }
 }
 /*# sourceMappingURL=homeStyle.css.map */

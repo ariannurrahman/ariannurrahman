@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/skillStyle.css";
 import "../styles/mainstyle.css";
 
@@ -8,7 +8,7 @@ import css from "../images/skill/css.png";
 import reactjs from "../images/skill/reactjs.png";
 import git from "../images/skill/git.png";
 import sass from "../images/skill/sass.png";
-
+import gsap from "gsap";
 const Skills = () => {
   const [play, setPlay] = useState(true);
 
@@ -18,25 +18,30 @@ const Skills = () => {
 
   const renderSkill = skillList.map((element, index) => {
     return (
-      <div
-        // className={`${
-        //   play === true
-        //     ? "side " + side[index]
-        //     : "side " + side[index] + " paused"
-        // }`}
-        className={`side + ${side[index]}`}
-        key={`${skillList}-${index}`}
-      >
+      <div className={`side + ${side[index]}`} key={`${skillList}-${index}`}>
         <img src={skillIcons[index]} alt={skillList[index] + " alt"} />
       </div>
     );
   });
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".slide-in",
+      { opacity: 0, transform: "translateX(-100%)" },
+      {
+        duration: 2,
+        stagger: 0.75,
+        ease: "expo",
+        transform: "translateX(0%)",
+        paused: false,
+        opacity: 1,
+      }
+    );
+  });
+
   return (
     <div className="skills-container">
-      <div className="skill-title">
-        <div>Skills and Experiences</div>
-      </div>
+      <div className="skill-title">Skills and Experiences</div>
 
       <div className="skill-desc">
         <p id="skp1">
@@ -53,19 +58,17 @@ const Skills = () => {
           for more details.
         </p>
       </div>
-
       <div className="cube-wrapper">
         <div className="scene">
           <div
-            className={play === true ? "cube" : "cube paused"}
-            // className="cube"
+            // className={play === true ? "cube" : "cube paused"}
+            className="cube"
             onClick={() => setPlay(!play)}
           >
             {renderSkill}
           </div>
         </div>
       </div>
-
       <div className="skill-design"></div>
     </div>
   );

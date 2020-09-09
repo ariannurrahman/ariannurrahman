@@ -23,7 +23,16 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-weight: 700;
   font-size: 2em;
 }
+
+.contact-greeting {
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 5%;
+}
 .contact-map-form {
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-flow: column nowrap;
   .contact-top {
@@ -54,7 +63,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
           margin-bottom: 1vh;
           border: 2px solid $borderColor;
           border-radius: 5px;
-          background-color: whitesmoke;
+          background-color: white;
           box-sizing: border-box;
           padding: 10px;
         }
@@ -82,11 +91,9 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
 @media only screen and (min-width: 768px) {
   .contact-map-form {
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     .contact-top {
       background-color: $actColor;
       height: 100%;
@@ -98,7 +105,33 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
     .contact-bottom {
       height: 100%;
-      margin: 0 5px;
+      margin: 0 20px;
+      justify-content: flex-start;
+      .contact-bottom__top {
+        form {
+          div > input,
+          textarea {
+            height: 50px;
+            margin-bottom: 2vh;
+          }
+          div > input[type="submit"] {
+            height: 50px;
+            border-radius: 10px;
+          }
+
+          .half-bottom {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            #contact-textarea {
+              height: 20vh;
+              max-height: 20vh;
+              max-width: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }

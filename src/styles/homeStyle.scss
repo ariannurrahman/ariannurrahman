@@ -14,25 +14,16 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   color: $darkGreen;
 }
 
-.home-top {
-  .bird {
-    position: absolute;
-    opacity: 0;
-    top: 20vh;
-    left: 60%;
-    width: 15%;
-    animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-  }
+.sun {
+  display: block;
+  position: absolute;
+  top: 12vh;
+  right: 6%;
+  width: 30%;
 }
 
 .bgsmall {
-  position: fixed;
-  top: 23vh;
-  right: 0;
-  width: 60%;
-  margin: 0;
-  opacity: 0;
-  animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
+  display: none;
 }
 
 .bottombg-box {
@@ -41,11 +32,8 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   left: 0;
   bottom: 0;
   width: 100%;
-  opacity: 0;
-  animation: fadeIn 0.5s 0.1s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-  padding-bottom: 0 !important;
   img {
-    max-width: 100%;
+    height: 100%;
     padding: 0 !important;
     display: block !important;
   }
@@ -59,13 +47,14 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
     display: flex;
     flex: 1;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
 
     p {
       font-weight: 700;
       font-size: 2rem;
+      margin-bottom: 1px;
     }
   }
 
@@ -86,50 +75,31 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   margin-top: 30px;
   border-radius: 5px;
   border: $borderColor 3px solid;
-  opacity: 0;
   display: block;
-  animation: fadeIn 0.5s 0.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes flying {
-  0% {
-    left: 0px;
-  }
-  5% {
-    visibility: visible;
-    left: 10px;
-  }
-  100% {
-    left: 60%;
-    visibility: visible;
-  }
-}
-
 @media only screen and (min-width: 768px) {
-  .home-top {
-    .bird {
-      width: 10%;
-    }
+  .bgsmall {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    margin: 0;
+  }
+  .sun {
+    width: 20%;
   }
 
-  .bottombg-box {
-    display: none;
-  }
+  // .bottombg-box {
+  //   display: none;
+  // }
 
   .bgsmall {
-    top: 15vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 
   .home-bottom {
@@ -140,6 +110,23 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
         font-weight: 700;
         font-size: 2.5rem;
       }
+    }
+  }
+
+  .bottombg-box {
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../images//background//bottombg.svg");
+    width: 100vw;
+    height: 15vh;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
     }
   }
 }
@@ -153,5 +140,9 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
         font-size: 3rem;
       }
     }
+  }
+
+  .bottombg-box {
+    height: 15vh;
   }
 }

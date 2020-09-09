@@ -12,6 +12,7 @@ body {
   background-color: #3eff8b;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3eff8b), to(#31d843));
   background-image: linear-gradient(#3eff8b, #31d843);
+  overflow: hidden;
 }
 
 .testis {

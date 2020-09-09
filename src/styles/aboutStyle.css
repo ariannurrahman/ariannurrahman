@@ -84,11 +84,7 @@
   width: 100%;
   font-weight: 600;
   font-size: 1.1em;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
   position: relative;
-  -webkit-animation: slidefromleft 1s forwards 0.5s ease;
-          animation: slidefromleft 1s forwards 0.5s ease;
 }
 
 .about-contact {
@@ -106,9 +102,6 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   height: 10vh;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.5s 1.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
-          animation: fadeIn 0.5s 1.5s cubic-bezier(0, 1.6, 0.6, 1) forwards;
   max-width: 60px;
 }
 
@@ -135,66 +128,8 @@
   text-align: center;
   width: 100%;
   font-size: 1.5em;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
   position: relative;
-  -webkit-animation: slidefromright 0.5s forwards 1.25s;
-          animation: slidefromright 0.5s forwards 1.25s;
   font-family: "Courgette", cursive;
-}
-
-@-webkit-keyframes slidefromleft {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes slidefromleft {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes slidefromright {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes slidefromright {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 @media only screen and (min-width: 768px) {
