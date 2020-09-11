@@ -8,11 +8,15 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-flow: column nowrap;
-  height: 90vh;
-  margin: 0 auto;
-  width: 80%;
+  background-color: $BGcolor;
+  background-image: linear-gradient($BGcolor, $SubBG);
+  width: 100%;
+  height: 100%;
   color: $darkGreen;
+  .skill-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .skill-title {
   margin: 5% auto;
@@ -28,97 +32,6 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-weight: 700;
   letter-spacing: 1px;
   text-align: left;
-}
-.cube-wrapper {
-  margin: auto 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.scene {
-  width: 100px;
-  height: 100px;
-  perspective: 800px;
-}
-
-.cube {
-  position: relative;
-  transform-style: preserve-3d;
-  transform: translateZ(-50px) rotateX(0deg) rotateY(0);
-  animation: cubbling 5s linear 0.5s infinite;
-}
-
-@keyframes cubbling {
-  0% {
-    transform: rotateX(0deg) rotateY(0);
-  }
-
-  50% {
-    transform: rotateX(180deg) rotateY(180deg);
-  }
-
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-.side {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  opacity: 0.8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  border: 3px solid $borderColor;
-  border-radius: 4px;
-  background-color: $SubBG;
-
-  img {
-    display: block;
-    width: 50%;
-  }
-}
-
-.paused {
-  animation: startover 3s;
-}
-
-@keyframes startover {
-  to {
-    transform: scale(0.6);
-  }
-}
-// @keyframes startover {
-//   0% {
-//     transform: rotateX(90deg) rotateY(90);
-//   }
-
-//   50% {
-//     transform: rotateX(45deg) rotateY(45deg);
-//   }
-//   to {
-//     transform: rotateX(0deg) rotateY(0);
-//   }
-// }
-
-.back {
-  transform: translateZ(-50px);
-}
-.left {
-  transform: translateX(-50px) rotateY(90deg);
-}
-.right {
-  transform: translateX(50px) rotateY(90deg);
-}
-.top {
-  transform: translateY(-50px) rotateX(90deg);
-}
-.bottom {
-  transform: translateY(50px) rotateX(90deg);
-}
-.front {
-  transform: translateZ(50px);
 }
 
 @media only screen and (min-width: 768px) {

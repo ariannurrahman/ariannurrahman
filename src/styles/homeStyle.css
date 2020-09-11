@@ -14,6 +14,7 @@
           flex-flow: column wrap;
   margin: 15px;
   color: #293f14;
+  overflow: hidden;
 }
 
 .sun {
@@ -90,8 +91,6 @@
   border-radius: 5px;
   border: #38a700 3px solid;
   display: block;
-  -webkit-box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
-          box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
 @media only screen and (min-width: 768px) {
@@ -125,7 +124,6 @@
   }
   .bottombg-box {
     z-index: 10;
-    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -135,7 +133,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow: hidden;
     background-image: url("../images//background//bottombg.svg");
     width: 100vw;
     height: 15vh;
@@ -148,15 +145,15 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .home-container {
+    margin: 0;
+  }
   .home-bottom .home-left {
     width: 100%;
   }
   .home-bottom .home-left p {
     font-weight: 700;
     font-size: 3rem;
-  }
-  .bottombg-box {
-    height: 15vh;
   }
 }
 /*# sourceMappingURL=homeStyle.css.map */

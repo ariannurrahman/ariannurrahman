@@ -1,0 +1,51 @@
+$size: 100px;
+$BGcolor: rgb(62, 255, 139); // springgreen
+$SubBG: rgb(49, 216, 67); //  malachite
+$borderColor: rgb(56, 167, 0); // yellow green color wheel
+$actColor: rgb(56, 108, 11); // pakistan green
+$darkGreen: rgb(41, 63, 20); //forest green traditional
+
+.cardWrapper {
+  width: $size;
+  height: $size;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cardFace {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+}
+.skill-icons {
+  width: 50%;
+}
+.front {
+  background-color: $SubBG;
+}
+
+.back {
+  background-color: $darkGreen;
+}
+
+.cardFace h1 {
+  margin: 0px;
+  font-size: 30px;
+  padding: 10px 0px 10px 10px;
+  border-bottom: solid 6px #aaa;
+  border-top: solid 6px #aaa;
+  background-color: black;
+  color: white;
+}
+
+.cardFace.back h1 {
+  border-color: #91e600;
+}

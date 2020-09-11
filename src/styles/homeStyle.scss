@@ -12,6 +12,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   flex-flow: column wrap;
   margin: 15px;
   color: $darkGreen;
+  overflow: hidden;
 }
 
 .sun {
@@ -76,7 +77,7 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   border-radius: 5px;
   border: $borderColor 3px solid;
   display: block;
-  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+  // box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
 @media only screen and (min-width: 768px) {
@@ -115,11 +116,9 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 
   .bottombg-box {
     z-index: 10;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background-image: url("../images//background//bottombg.svg");
     width: 100vw;
     height: 15vh;
@@ -132,6 +131,9 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 }
 
 @media only screen and (min-width: 1024px) {
+  .home-container {
+    margin: 0;
+  }
   .home-bottom {
     .home-left {
       width: 100%;
@@ -140,9 +142,5 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
         font-size: 3rem;
       }
     }
-  }
-
-  .bottombg-box {
-    height: 15vh;
   }
 }
