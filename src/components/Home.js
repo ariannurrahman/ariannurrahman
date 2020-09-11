@@ -69,7 +69,6 @@ const Home = () => {
       { opacity: 0, transform: "translateY(100%)" },
       {
         duration: 2,
-
         ease: "expo",
         transform: "translateY(0%)",
         paused: false,

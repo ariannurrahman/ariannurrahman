@@ -56,9 +56,16 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
     align-items: center;
     .contact-bottom__top {
       form {
+        .half-top {
+          display: flex;
+          justify-content: space-between;
+          input {
+            width: 48%;
+          }
+        }
         div > input,
         textarea {
-          height: 40px;
+          height: 35px;
           width: 100%;
           margin-bottom: 1vh;
           border: 2px solid $borderColor;
@@ -68,9 +75,9 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
           padding: 10px;
         }
         div > input[type="submit"] {
-          width: 70%;
+          width: 50%;
           padding: 0px;
-          height: 40px;
+          height: 35px;
         }
 
         .half-bottom {

@@ -5,13 +5,19 @@ $borderColor: rgb(56, 167, 0); // yellow green color wheel
 $actColor: rgb(56, 108, 11); // pakistan green
 $darkGreen: rgb(41, 63, 20); //forest green traditional
 
+.card-container {
+  margin: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
 .cardWrapper {
   width: $size;
   height: $size;
   position: relative;
   float: left;
-  margin-right: 10px;
-  cursor: pointer;
+  margin: 10px 8px 10px 8px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,10 +32,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   overflow: hidden;
 }
 .skill-icons {
-  width: 50%;
+  width: 60%;
 }
 .front {
-  background-color: $SubBG;
+  background-color: $actColor;
 }
 
 .back {
@@ -37,12 +43,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 }
 
 .cardFace h1 {
+  text-align: center;
   margin: 0px;
-  font-size: 30px;
-  padding: 10px 0px 10px 10px;
-  border-bottom: solid 6px #aaa;
-  border-top: solid 6px #aaa;
-  background-color: black;
+  font-size: 15px;
+
   color: white;
 }
 

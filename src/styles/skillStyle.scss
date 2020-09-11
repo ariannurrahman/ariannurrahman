@@ -7,9 +7,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
 .skills-container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   background-color: $BGcolor;
   background-image: linear-gradient($BGcolor, $SubBG);
+  background-size: cover;
   width: 100%;
   height: 100%;
   color: $darkGreen;
@@ -28,15 +29,15 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   font-size: 2em;
 }
 .skill-desc {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
   .skills-container {
-    flex-flow: r nowrap;
+    flex-flow: row nowrap;
     height: 90vh;
     width: 90%;
     margin: 0 auto;

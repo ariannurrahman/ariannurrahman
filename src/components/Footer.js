@@ -12,13 +12,14 @@ const Footer = () => {
   useEffect(() => {
     gsap.to(".contact-wrapper", {
       bottom: 0,
-      duration: 5,
+      duration: 3,
       rotation: 360,
-      stagger: 0.4,
-      ease: "elastic",
-      rotate: true,
+      stagger: 0.25,
+      ease: "bounce",
+
       paused: false,
       opacity: 1,
+      scale: 1,
     });
   });
 

@@ -46,8 +46,8 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-title">Contact Me</div>
       <div className="contact-greeting">
-        If you have any question or want to talk about programming or business
-        query, don't hesitate to contact me using the form below.
+        If you have any question or want to talk , don't hesitate to contact me
+        using the form below.
       </div>
       <div className="contact-map-form">
         <div className="contact-top">
@@ -66,12 +66,14 @@ const Contact = () => {
                   placeholder="Name"
                   ref={register}
                   name="name"
+                  id="name-left"
                 ></input>
                 <input
                   type="email"
                   placeholder="Email"
                   ref={register}
                   name="email"
+                  id="id-right"
                 ></input>
               </div>
               <div className="half-bottom">
