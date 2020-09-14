@@ -17,7 +17,7 @@ const Home = () => {
       { opacity: 0, scale: 0 },
       {
         stagger: 1,
-        duration: 2,
+        duration: 1,
         ease: "expo",
         scale: 1,
         paused: false,
@@ -40,8 +40,8 @@ const Home = () => {
       { opacity: 0, transform: "translateX(-100%)" },
       {
         duration: 1,
-        stagger: 0.5,
-        ease: "power1",
+        stagger: 0.25,
+        ease: "power2",
         transform: "translateX(0%)",
         paused: false,
         opacity: 1,
@@ -79,7 +79,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <img src={sun} className="sun scaleIn" alt="sun" />
+      {/* <img src={sun} className="sun scaleIn" alt="sun" /> */}
       <div className="home-bottom">
         <div className="home-left">
           <p className="title-style-home">Hi!</p>
@@ -95,9 +95,9 @@ const Home = () => {
       </div>
 
       {/* <img src={tree} className="bgsmall scaleIn" alt="tree" /> */}
-      <div className="bottombg-box">
+      {/* <div className="bottombg-box">
         <img src={bottombg} alt="smartphone bg bottom" />
-      </div>
+      </div> */}
     </div>
   );
 };

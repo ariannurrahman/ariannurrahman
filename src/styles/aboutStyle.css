@@ -16,7 +16,7 @@
   width: 80%;
   height: 90vh;
   margin: 0 auto;
-  color: #293f14;
+  color: black;
   overflow-x: hidden;
 }
 
@@ -38,36 +38,16 @@
 }
 
 .bottom-left img {
-  width: 90%;
+  width: 60%;
   max-width: 350px;
   border-radius: 3%;
-  border: 3px solid #38a700;
-}
-
-.top-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  font-weight: 600;
-  font-size: 4vh;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  position: relative;
-  -webkit-animation: slidefromright 0.75s forwards ease;
-          animation: slidefromright 0.75s forwards ease;
+  border: 3px solid #cefde3;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
 }
 
 .bottom-text {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +144,7 @@
     width: 80%;
     height: 100vh;
     margin: 0 auto;
-    color: #293f14;
+    color: black;
     overflow-x: hidden;
   }
   .footer-contact {

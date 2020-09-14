@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import home from "../images/home.svg";
 import about from "../images/about.svg";
-import skills from "../images/skills.svg";
+import skills from "../images/brain.png";
 import contact from "../images/contact.svg";
 import "../styles/headerStyle.css";
 
@@ -41,7 +41,8 @@ const Header = () => {
         exact
         className="navigation-button"
         key={"navIcon" + index}
-        activeStyle={{ borderBottom: "3px ridge rgb(56, 167, 0)" }}
+        // activeStyle={{ borderBottom: "0.4px solid black" }}
+        // activeClassName="active"
       >
         <img
           src={element}

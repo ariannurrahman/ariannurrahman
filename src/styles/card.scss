@@ -1,10 +1,5 @@
+@import "./utility/variable.scss";
 $size: 100px;
-$BGcolor: rgb(62, 255, 139); // springgreen
-$SubBG: rgb(49, 216, 67); //  malachite
-$borderColor: rgb(56, 167, 0); // yellow green color wheel
-$actColor: rgb(56, 108, 11); // pakistan green
-$darkGreen: rgb(41, 63, 20); //forest green traditional
-
 .card-container {
   margin: 5px;
   display: flex;

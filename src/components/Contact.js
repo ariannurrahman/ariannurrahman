@@ -16,6 +16,7 @@ const Contact = () => {
     const serviceId = "arian.dev";
     emailjs.sendForm(serviceId, templateId, "#contact", userId);
   };
+  console.log(emailjs);
 
   useEffect(() => {
     mapboxgl.accessToken =
@@ -64,14 +65,14 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  ref={register}
+                  ref={register({ required: true, maxLength: 32 })}
                   name="name"
                   id="name-left"
                 ></input>
                 <input
                   type="email"
                   placeholder="Email"
-                  ref={register}
+                  ref={register({ required: true })}
                   name="email"
                   id="id-right"
                 ></input>
@@ -80,14 +81,14 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Subject"
-                  ref={register}
+                  ref={register({ required: true })}
                   name="subject"
                 ></input>
                 <textarea
                   type="text"
                   placeholder="Message"
                   id="contact-textarea"
-                  ref={register}
+                  ref={register({ required: true, minLength: 12 })}
                   name="message"
                 ></textarea>
                 <input type="submit" placeholder="Submit"></input>

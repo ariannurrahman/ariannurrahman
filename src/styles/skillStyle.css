@@ -8,13 +8,8 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #3eff8b;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3eff8b), to(#31d843));
-  background-image: linear-gradient(#3eff8b, #31d843);
-  background-size: cover;
   width: 100%;
   height: 100%;
-  color: #293f14;
 }
 
 .skills-container .skill-wrapper {
@@ -54,7 +49,7 @@
     height: 90vh;
     width: 90%;
     margin: 0 auto;
-    color: #293f14;
+    color: black;
   }
 }
 /*# sourceMappingURL=skillStyle.css.map */

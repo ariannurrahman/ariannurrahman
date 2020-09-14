@@ -49,7 +49,7 @@ const About = () => {
       <div className="bottom-left">
         <img src={arian} alt="Me on grass" />
       </div>
-      <div className="top-text slide">Hi! I'm Arian</div>
+
       <div className="bottom-text slide">
         I describe myself as a passionate developer who loves coding, open
         source, and the web platform.
@@ -60,7 +60,12 @@ const About = () => {
       </div>
 
       <div className="bottom-quote slide">
-        "Consistency and discipline is the key to learn"
+        {/* "Consistency and discipline is the key to learn" */}
+        "When you struggle with a problem, that's when you understand it"
+      </div>
+
+      <div className="bottom-quote slide">
+        <strong>-Elon Musk-</strong>
       </div>
     </div>
   );

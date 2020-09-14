@@ -1,9 +1,4 @@
-$BGcolor: rgb(62, 255, 139); // springgreen
-$SubBG: rgb(49, 216, 67); //  malachite
-$borderColor: rgb(56, 167, 0); // yellow green color wheel
-$actColor: rgb(56, 108, 11); // pakistan green
-$darkGreen: rgb(41, 63, 20); //forest green traditional
-
+@import "./utility/variable.scss";
 .home-container {
   display: flex;
   justify-content: center;
@@ -74,9 +69,10 @@ $darkGreen: rgb(41, 63, 20); //forest green traditional
   width: 65%;
   height: 50px;
   margin-top: 30px;
-  border-radius: 5px;
+  border-radius: 56px;
   border: $borderColor 3px solid;
   display: block;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
   // box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
