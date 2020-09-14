@@ -13,6 +13,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin: 8px auto;
 }
 
 .cardWrapper {
@@ -20,7 +22,7 @@
   height: 100px;
   position: relative;
   float: left;
-  margin: 10px 8px 10px 8px;
+  margin: 8px 8px 8px 8px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,6 +30,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 4px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -49,11 +52,11 @@
 }
 
 .front {
-  background-color: #386c0b;
+  background-color: #374a67;
 }
 
 .back {
-  background-color: #293f14;
+  background-color: #616283;
 }
 
 .cardFace h1 {
@@ -63,7 +66,18 @@
   color: white;
 }
 
-.cardFace.back h1 {
+.cardFace .back h1 {
   border-color: #91e600;
+}
+
+@media only screen and (min-width: 768px) {
+  .cardWrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .cardFace {
+    width: 150px;
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=card.css.map */

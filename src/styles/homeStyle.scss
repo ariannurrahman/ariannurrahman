@@ -1,44 +1,19 @@
 @import "./utility/variable.scss";
 .home-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: flex-start;
-  height: 80vh;
+  height: 90vh;
   flex-flow: column wrap;
   margin: 15px;
   color: $darkGreen;
   overflow: hidden;
 }
 
-.sun {
-  display: block;
-  position: absolute;
-  top: 12vh;
-  right: 6%;
-  width: 30%;
-}
-
-.bgsmall {
-  display: none;
-}
-
-.bottombg-box {
-  display: block;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  img {
-    height: 100%;
-    padding: 0 !important;
-    display: block !important;
-  }
-}
-
 .home-bottom {
   margin-left: 8%;
   display: flex;
-
+  height: 60vh;
   .home-left {
     display: flex;
     flex: 1;
@@ -46,14 +21,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-
     p {
       font-weight: 700;
       font-size: 2rem;
       margin-bottom: 1px;
     }
   }
-
   .home-right {
     img {
       display: none;
@@ -70,35 +43,12 @@
   height: 50px;
   margin-top: 30px;
   border-radius: 56px;
-  border: $borderColor 3px solid;
+  border: rgba(55, 74, 103, 0.5) 3px solid;
   display: block;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
-  // box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
 }
 
 @media only screen and (min-width: 768px) {
-  .bgsmall {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    margin: 0;
-  }
-  .sun {
-    width: 20%;
-  }
-
-  // .bottombg-box {
-  //   display: none;
-  // }
-
-  .bgsmall {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-
   .home-bottom {
     margin-left: 12%;
     .home-left {
@@ -107,21 +57,6 @@
         font-weight: 700;
         font-size: 2.5rem;
       }
-    }
-  }
-
-  .bottombg-box {
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../images//background//bottombg.svg");
-    width: 100vw;
-    height: 15vh;
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
     }
   }
 }

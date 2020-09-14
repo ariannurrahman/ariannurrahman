@@ -10,17 +10,16 @@ const Footer = () => {
   const contactList = [linkedin, gmail, github];
 
   useEffect(() => {
-    gsap.to(".contact-wrapper", {
-      bottom: 0,
-      duration: 3,
-      rotation: 360,
-      stagger: 0.25,
-      ease: "bounce",
-
-      paused: false,
-      opacity: 1,
-      scale: 1,
-    });
+    gsap.fromTo(
+      ".contact-wrapper",
+      { opacity: 0, scale: 0 },
+      {
+        duration: 2,
+        ease: "power1",
+        opacity: 1,
+        scale: 1,
+      }
+    );
   });
 
   const renderContact = contactList.map((element, index) => {

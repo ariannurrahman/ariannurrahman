@@ -4,19 +4,44 @@ import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
+import close from "../images/close.svg";
 const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
+  const [success, setSuccess] = useState(false);
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
+    event.preventDefault();
     const templateId = "template_rng4k44";
     const userId = "user_EdYYodkIDIBxVwpu13uBQ";
     const serviceId = "arian.dev";
-    emailjs.sendForm(serviceId, templateId, "#contact", userId);
+    emailjs.sendForm(serviceId, templateId, "#contact", userId).then(
+      (response) => {
+        setSuccess(!success);
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   };
-  console.log(emailjs);
+
+  const emailResponse = () => {
+    return (
+      <div className="form-response">
+        <div className="response-text">Message sent successfully...</div>
+        {/* <div className="response-button">
+          <input type="button" value="Close" />
+        </div> */}
+      </div>
+    );
+  };
+
+  const renderResponse = () => {
+    setTimeout(emailResponse, 1000);
+  };
 
   useEffect(() => {
     mapboxgl.accessToken =
@@ -52,7 +77,11 @@ const Contact = () => {
       </div>
       <div className="contact-map-form">
         <div className="contact-top">
-          <div id="mapboxgl" ref={(el) => (mapContainer.current = el)}></div>
+          <div
+            id="mapboxgl"
+            ref={(el) => (mapContainer.current = el)}
+            style={{ borderRadius: "8px" }}
+          ></div>
         </div>
         <div className="contact-bottom">
           <div className="contact-bottom__top">
@@ -96,6 +125,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        {renderResponse()}
         <Footer />
       </div>
     </div>

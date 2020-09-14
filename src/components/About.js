@@ -45,27 +45,26 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <div className="about-title">About Me</div>
-      <div className="bottom-left">
-        <img src={arian} alt="Me on grass" />
-      </div>
+      <div className="about-wrapper">
+        <div className="about-title">About Me</div>
+        <div className="bottom-left">
+          <img src={arian} alt="Me on grass" />
+        </div>
 
-      <div className="bottom-text slide">
-        I describe myself as a passionate developer who loves coding, open
-        source, and the web platform.
-      </div>
+        <div className="bottom-text slide">
+          I describe myself as a passionate developer who loves coding, open
+          source, and the web platform.
+        </div>
 
-      <div className="about-contact" onClick={onClickHandler}>
-        <img src={contact} alt="contact me" />
-      </div>
+        <div className="about-contact" onClick={onClickHandler}>
+          <img src={contact} alt="contact me" />
+        </div>
 
-      <div className="bottom-quote slide">
-        {/* "Consistency and discipline is the key to learn" */}
-        "When you struggle with a problem, that's when you understand it"
-      </div>
-
-      <div className="bottom-quote slide">
-        <strong>-Elon Musk-</strong>
+        <div className="bottom-quote slide">
+          {/* "Consistency and discipline is the key to learn" */}
+          "When you struggle with a problem, that's when you understand it"
+          <u>Elon Musk</u>
+        </div>
       </div>
     </div>
   );

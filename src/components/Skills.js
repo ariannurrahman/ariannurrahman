@@ -9,15 +9,21 @@ const Skills = () => {
       <div className="skill-wrapper">
         <div className="skill-title">Skills and Experiences</div>
 
-        <div className="skill-desc slide">
-          I always love to produce responsive websites and web apps that provide
-          users the best experience suited to their device and browser. Visit my{" "}
-          <a href="https://www.linkedin.com/in/arian-nurrahman/">LinkedIn </a>
-          for more details.
-          {/* <p>Currently looking for a job as front end web developer</p> */}
+        <div className="skill-right">
+          <div className="skill-desc slide">
+            I love to produce responsive websites and web apps that provide
+            users the best experience. Visit my{" "}
+            <a
+              href="https://www.linkedin.com/in/arian-nurrahman/"
+              style={{ textDecoration: "none" }}
+            >
+              LinkedIn{" "}
+            </a>
+            for more details.
+            {/* <p>Currently looking for a job as front end web developer</p> */}
+          </div>
+          <Card />
         </div>
-
-        <Card />
       </div>
     </div>
   );

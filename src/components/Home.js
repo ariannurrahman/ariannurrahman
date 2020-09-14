@@ -39,6 +39,7 @@ const Home = () => {
       ".title-style-home",
       { opacity: 0, transform: "translateX(-100%)" },
       {
+        delay: 0.5,
         duration: 1,
         stagger: 0.25,
         ease: "power2",
@@ -54,9 +55,9 @@ const Home = () => {
       ".button-contactme",
       { opacity: 0, scale: 0 },
       {
-        delay: 1.5,
+        delay: 1.25,
         duration: 0.5,
-        ease: "power1",
+        ease: "back.inOut",
         scale: 1,
         paused: false,
         opacity: 1,
@@ -79,7 +80,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* <img src={sun} className="sun scaleIn" alt="sun" /> */}
       <div className="home-bottom">
         <div className="home-left">
           <p className="title-style-home">Hi!</p>
@@ -93,11 +93,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-
-      {/* <img src={tree} className="bgsmall scaleIn" alt="tree" /> */}
-      {/* <div className="bottombg-box">
-        <img src={bottombg} alt="smartphone bg bottom" />
-      </div> */}
     </div>
   );
 };

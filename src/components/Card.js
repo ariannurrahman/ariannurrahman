@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/card.css";
 import js from "../images/skill/js.png";
 import html from "../images/skill/html.png";
@@ -6,11 +6,20 @@ import css from "../images/skill/css.svg";
 import reactjs from "../images/skill/reactjs.png";
 import git from "../images/skill/git.png";
 import sass from "../images/skill/sass.png";
+import gsapIcon from "../images/skill/gsap.svg";
 import gsap from "gsap";
 
 const Card = () => {
-  const skillList = ["JavaScript", "HTML", "CSS", "React", "SASS", "git"];
-  const skillIcons = [js, html, css, reactjs, sass, git];
+  const skillList = [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "React",
+    "SASS",
+    "git",
+    "GSAP",
+  ];
+  const skillIcons = [js, html, css, reactjs, sass, git, gsapIcon];
 
   useEffect(() => {
     gsap.fromTo(
@@ -40,6 +49,7 @@ const Card = () => {
         ".card-JavaScript",
         ".card-SASS",
         ".card-React",
+        ".card-GSAP",
       ],
       { transformStyle: "preserve-3d" }
     );
@@ -49,7 +59,7 @@ const Card = () => {
 
   const onMouseEnterHandler = (icon) => {
     gsap.to(`.card-${icon}`, {
-      duration: 0.8,
+      duration: 1,
       rotationY: 540,
       ease: "Back.easeOut",
     });
