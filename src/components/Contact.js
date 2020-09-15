@@ -32,7 +32,6 @@ const Contact = () => {
       }
     );
   };
-  console.log(success);
 
   const emailResponse = () => {
     return (
@@ -65,9 +64,7 @@ const Contact = () => {
         anchor: "center",
       });
 
-      let marker = new mapboxgl.Marker()
-        .setLngLat([107.64809, -6.964609])
-        .addTo(map);
+      new mapboxgl.Marker().setLngLat([107.64809, -6.964609]).addTo(map);
 
       map.on("load", () => {
         setMap(map);
