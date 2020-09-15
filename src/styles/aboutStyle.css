@@ -17,6 +17,7 @@
   height: 100%;
   margin: 0 auto;
   color: #0e1116;
+  z-index: 80;
 }
 
 .about-wrapper {
@@ -43,7 +44,7 @@
 .about-title {
   margin: 5% auto;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .bottom-left {
@@ -61,12 +62,29 @@
   width: 60%;
   max-width: 350px;
   border-radius: 3%;
-  border: 3px solid rgba(55, 74, 103, 0.5);
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
-          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(55, 74, 103, 0.5);
+  -webkit-box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
 }
 
-.bottom-text {
+.bottom-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 50;
+}
+
+.bottom-right .bottom-text {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,7 +105,7 @@
   position: relative;
 }
 
-.about-contact {
+.bottom-right .about-contact {
   width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,11 +123,11 @@
   max-width: 60px;
 }
 
-.about-contact img {
+.bottom-right .about-contact img {
   height: 100%;
 }
 
-.bottom-quote {
+.bottom-right .bottom-quote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,26 +151,26 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .about-top {
-    font-size: 2rem;
+  .about-title {
+    font-size: 3rem;
   }
-  .bottom-text {
-    font-size: 1.5rem;
+  .bottom-right .bottom-text,
+  .bottom-right .bottom-quote {
+    font-size: 1.3rem;
   }
-  .bottom-quote {
-    font-size: 2em;
+  .bottom-left img {
+    width: 80%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  .about-title {
+    font-size: 4rem;
+  }
   .about-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -161,20 +179,40 @@
             align-items: center;
     position: relative;
     top: 0;
-    width: 80%;
-    height: 100vh;
+    width: 100%;
     margin: 0 auto;
     color: #0e1116;
-    overflow-x: hidden;
+    overflow: hidden;
   }
-  .footer-contact {
-    display: none;
+  .about-container .about-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
-  .about-top {
-    font-size: 4em;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+  .about-container .about-wrapper .about-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-container .about-wrapper .about-bottom .bottom-left {
+    width: 50%;
+  }
+  .about-container .about-wrapper .about-bottom .bottom-left img {
+    width: 80%;
+  }
+  .about-container .about-wrapper .about-bottom .bottom-right {
+    width: 50%;
   }
   .about-contact {
     display: none;

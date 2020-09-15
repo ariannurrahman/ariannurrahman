@@ -22,6 +22,8 @@ const Header = () => {
         }
         key={`imagelink-${index}`}
         className="navigation-social"
+        target="_blank"
+        rel="noopener"
       >
         <img
           src={element}

@@ -24,9 +24,23 @@ const Footer = () => {
 
   const renderContact = contactList.map((element, index) => {
     return (
-      <div className="contact-wrapper" key={element[index] + " key"}>
+      <a
+        className="contact-wrapper"
+        key={element}
+        href={
+          contactList[index].toString().split("/")[3].split(".")[0] ===
+          "linkedin"
+            ? "https://www.linkedin.com/in/arian-nurrahman/"
+            : contactList[index].toString().split("/")[3].split(".")[0] ===
+              "github"
+            ? "https://github.com/ariannurrahman"
+            : "https://google.com"
+        }
+        target="_blank"
+        rel="noopener"
+      >
         <img src={element} alt={`${element[index]}-key`} />
-      </div>
+      </a>
     );
   });
 

@@ -4,7 +4,6 @@ import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-import close from "../images/close.svg";
 const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
@@ -13,13 +12,13 @@ const Contact = () => {
   const mapContainer = useRef(null);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
-    event.preventDefault();
     const templateId = "template_rng4k44";
     const userId = "user_EdYYodkIDIBxVwpu13uBQ";
     const serviceId = "arian.dev";
     emailjs.sendForm(serviceId, templateId, "#contact", userId).then(
       (response) => {
         setSuccess(!success);
+        event.target.reset();
         console.log(response);
       },
       (error) => {
@@ -31,16 +30,11 @@ const Contact = () => {
   const emailResponse = () => {
     return (
       <div className="form-response">
-        <div className="response-text">Message sent successfully...</div>
-        {/* <div className="response-button">
-          <input type="button" value="Close" />
-        </div> */}
+        <div className="response-text" onClick={() => setSuccess(!success)}>
+          Message sent successfully...
+        </div>
       </div>
     );
-  };
-
-  const renderResponse = () => {
-    setTimeout(emailResponse, 1000);
   };
 
   useEffect(() => {
@@ -72,7 +66,7 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-title">Contact Me</div>
       <div className="contact-greeting">
-        If you have any question or want to talk , don't hesitate to contact me
+        If you have any question or want to talk, don't hesitate to contact me
         using the form below.
       </div>
       <div className="contact-map-form">
@@ -125,8 +119,8 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        {renderResponse()}
         <Footer />
+        {success ? emailResponse() : null}
       </div>
     </div>
   );

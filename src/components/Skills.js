@@ -2,12 +2,12 @@ import React from "react";
 import "../styles/skillStyle.css";
 import "../styles/mainstyle.css";
 const Card = React.lazy(() => import("./Card"));
-const Footer = React.lazy(() => import("./Footer"));
+
 const Skills = () => {
   return (
     <div className="skills-container">
       <div className="skill-wrapper">
-        <div className="skill-title">Skills and Experiences</div>
+        <div className="skill-title">Skill & Knowledge</div>
 
         <div className="skill-right">
           <div className="skill-desc slide">

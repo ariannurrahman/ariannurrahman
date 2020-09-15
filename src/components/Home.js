@@ -5,34 +5,8 @@ import "../styles/homeStyle.css";
 import "../styles/mainstyle.css";
 import gsap from "gsap";
 
-import sun from "../images/background/sun.svg";
-import bottombg from "../images/background/bottombg.svg";
-
 const Home = () => {
   const history = useHistory();
-
-  useEffect(() => {
-    gsap.fromTo(
-      ".scaleIn",
-      { opacity: 0, scale: 0 },
-      {
-        stagger: 1,
-        duration: 1,
-        ease: "expo",
-        scale: 1,
-        paused: false,
-        opacity: 1,
-      }
-    );
-  });
-  useEffect(() => {
-    gsap.to(".sun", {
-      duration: 20,
-      rotation: 360,
-      ease: "linear",
-      repeat: -1,
-    });
-  });
 
   useEffect(() => {
     gsap.fromTo(
@@ -59,19 +33,6 @@ const Home = () => {
         duration: 0.5,
         ease: "back.inOut",
         scale: 1,
-        paused: false,
-        opacity: 1,
-      }
-    );
-  });
-  useEffect(() => {
-    gsap.fromTo(
-      ".bottombg-box",
-      { opacity: 0, transform: "translateY(100%)" },
-      {
-        duration: 2,
-        ease: "expo",
-        transform: "translateY(0%)",
         paused: false,
         opacity: 1,
       }

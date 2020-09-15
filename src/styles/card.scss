@@ -7,7 +7,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 8px auto;
+  margin: 16px auto;
+
+  padding: 20px 0;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 35px -7px rgba(0, 0, 0, 0.6);
 }
 .cardWrapper {
   width: 100px;

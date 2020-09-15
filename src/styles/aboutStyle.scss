@@ -9,6 +9,7 @@
   height: 100%;
   margin: 0 auto;
   color: $darkGreen;
+  z-index: 80;
 }
 
 .about-wrapper {
@@ -26,9 +27,8 @@
 .about-title {
   margin: 5% auto;
   font-weight: 700;
-  font-size: 2em;
+  font-size: $titlePhoneSize;
 }
-
 .bottom-left {
   display: flex;
   justify-content: center;
@@ -37,82 +37,108 @@
     width: 60%;
     max-width: 350px;
     border-radius: 3%;
-    border: 3px solid rgba($borderColor, 0.5);
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba($borderColor, 0.5);
+    box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
   }
 }
 
-.bottom-text {
-  margin-top: 20px;
+.bottom-right {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-content: center;
-  text-align: center;
-  width: 100%;
-  font-weight: 600;
-  font-size: 1.1em;
-  position: relative;
-}
-
-.about-contact {
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: column nowrap;
-  height: 10vh;
-  max-width: 60px;
-  img {
-    height: 100%;
+  align-items: center;
+  z-index: 50;
+  .bottom-text {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.1em;
+    position: relative;
   }
-}
 
-.bottom-quote {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-content: center;
-  flex: 1;
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
-  position: relative;
-  font-family: "Courgette", cursive;
+  .about-contact {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column nowrap;
+    height: 10vh;
+    max-width: 60px;
+    img {
+      height: 100%;
+    }
+  }
+
+  .bottom-quote {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+    font-family: "Courgette", cursive;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .about-top {
-    font-size: 2rem;
+  .about-title {
+    font-size: $titleTabletSize;
   }
-  .bottom-text {
-    font-size: 1.5rem;
+  .bottom-right {
+    .bottom-text,
+    .bottom-quote {
+      font-size: 1.3rem;
+    }
   }
-  .bottom-quote {
-    font-size: 2em;
+  .bottom-left {
+    img {
+      width: 80%;
+    }
   }
 }
 @media only screen and (min-width: 1024px) {
+  .about-title {
+    font-size: $titleDesktopSize;
+  }
   .about-container {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 0;
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+
     margin: 0 auto;
     color: $darkGreen;
-    overflow-x: hidden;
+    overflow: hidden;
+    .about-wrapper {
+      flex-flow: column nowrap;
+      .about-bottom {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        .bottom-left {
+          width: 50%;
+          img {
+            width: 80%;
+          }
+        }
+        .bottom-right {
+          width: 50%;
+        }
+      }
+    }
   }
-  .footer-contact {
-    display: none;
-  }
-  .about-top {
-    font-size: 4em;
-    flex: 1;
-  }
+
   .about-contact {
     display: none;
   }

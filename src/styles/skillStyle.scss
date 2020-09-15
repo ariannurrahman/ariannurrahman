@@ -2,12 +2,15 @@
 
 .skills-container {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  position: relative;
   .skill-wrapper {
     width: 80%;
+    height: 90vh;
     margin: 0 auto;
   }
 }
@@ -18,7 +21,7 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  font-size: 2em;
+  font-size: $titlePhoneSize;
 }
 .skill-desc {
   font-size: 1rem;
@@ -35,7 +38,19 @@
     margin: 0 auto;
     color: $darkGreen;
   }
+  .skill-desc {
+    font-size: 1rem;
+  }
+  .skill-title {
+    font-size: $titleTabletSize;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+  .skill-title {
+    font-size: $titleDesktopSize;
+  }
+  .skill-desc {
+    font-size: 1.3rem;
+  }
 }
