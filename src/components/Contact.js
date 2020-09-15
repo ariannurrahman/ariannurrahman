@@ -4,20 +4,26 @@ import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
+import gsap from "gsap";
 const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
+  const [wait, setWait] = useState(false);
   const [map, setMap] = useState(null);
   const mapContainer = useRef(null);
+  const messageSent = "Message sent successfully... ";
+  const pleaseWait = "Please wait... ";
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
+    setSuccess(!success);
     const templateId = "template_rng4k44";
     const userId = "user_EdYYodkIDIBxVwpu13uBQ";
     const serviceId = "arian.dev";
+    success ? setWait(true) : setWait(false);
     emailjs.sendForm(serviceId, templateId, "#contact", userId).then(
       (response) => {
-        setSuccess(!success);
+        setSuccess(success);
         event.target.reset();
         console.log(response);
       },
@@ -26,17 +32,27 @@ const Contact = () => {
       }
     );
   };
+  console.log(success);
 
   const emailResponse = () => {
     return (
       <div className="form-response">
-        <div className="response-text" onClick={() => setSuccess(!success)}>
-          Message sent successfully...
-        </div>
+        <div className="response-text">{wait ? pleaseWait : messageSent}</div>
       </div>
     );
   };
-
+  useEffect(() => {
+    gsap.fromTo(
+      ".form-response",
+      { opacity: 0, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        ease: "elastic",
+        duration: 0.75,
+      }
+    );
+  });
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXJpYW5kcm9pZCIsImEiOiJja2FiM2VhbTEwdXBoMnJqcDRndW94YmwxIn0.lOrYJvwhR54494WrMWNWUA";
@@ -111,7 +127,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Message"
                   id="contact-textarea"
-                  ref={register({ required: true, minLength: 12 })}
+                  ref={register({ required: true, minLength: 5 })}
                   name="message"
                 ></textarea>
                 <input type="submit" placeholder="Submit"></input>
