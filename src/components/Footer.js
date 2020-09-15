@@ -37,7 +37,7 @@ const Footer = () => {
             : "https://google.com"
         }
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <img src={element} alt={`${element[index]}-key`} />
       </a>
