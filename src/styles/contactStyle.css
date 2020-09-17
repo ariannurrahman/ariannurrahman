@@ -14,7 +14,7 @@
           align-items: center;
   position: relative;
   width: 80%;
-  height: 80vh;
+  height: 85vh;
   margin: 0 auto;
   color: #0e1116;
   overflow-x: hidden;
@@ -261,6 +261,10 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .contact-container {
+    width: 80%;
+    height: 100vh;
+  }
   .contact-title {
     margin: 5% auto;
     font-weight: 700;
@@ -325,9 +329,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .contact-bottom .contact-bottom__top {
-    width: 90%;
   }
   .contact-bottom #mapboxgl {
     height: 1vh;

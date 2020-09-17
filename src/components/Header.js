@@ -67,7 +67,7 @@ const Header = () => {
         </NavLink>
       </div>
 
-      <div className="navigation-container ">{renderNav}</div>
+      <div className="navigation-container">{renderNav}</div>
 
       <div className="sosmed-container">{renderSosmed}</div>
     </div>

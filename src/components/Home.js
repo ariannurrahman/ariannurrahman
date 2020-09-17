@@ -43,9 +43,12 @@ const Home = () => {
     <div className="home-container">
       <div className="home-bottom">
         <div className="home-left">
-          <p className="title-style-home">Hi!</p>
-          <p className="title-style-home">I'm Arian,</p>
-          <p className="title-style-home">Web Developer</p>
+          <div className="title-style-home">Hi!</div>
+
+          <div className="title-style-home">I'm Arian,</div>
+
+          <div className="title-style-home">Web Developer</div>
+
           <button
             onClick={() => history.push("/contact")}
             className="button-contactme"

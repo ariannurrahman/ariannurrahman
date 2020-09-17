@@ -1,64 +1,59 @@
 @import "./utility/variable.scss";
 .home-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-content: flex-start;
   height: 90vh;
+  margin-top: 10vh;
   flex-flow: column wrap;
-  margin: 15px;
   color: $darkGreen;
   overflow: hidden;
 }
 
 .home-bottom {
-  margin-left: 8%;
   display: flex;
-  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  height: 50%;
   .home-left {
     display: flex;
-    flex: 1;
     flex-flow: column nowrap;
-    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    p {
+    margin-left: 10%;
+    .title-style-home {
       font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 1px;
+      font-size: $titlePhoneSize;
+      margin-bottom: 32px;
     }
   }
-  .home-right {
-    img {
-      display: none;
-    }
+  .button-contactme {
+    color: $darkGreen;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1em;
+    width: 65%;
+    min-width: 130px;
+    max-width: 180px;
+    height: 52px;
+    border-radius: 56px;
+    border: rgba(55, 74, 103, 0.2) 3px solid;
+    display: block;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
   }
-}
-
-.button-contactme {
-  color: $darkGreen;
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 1em;
-  width: 65%;
-  height: 50px;
-  margin-top: 30px;
-  border-radius: 56px;
-  border: rgba(55, 74, 103, 0.2) 3px solid;
-  display: block;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
 }
 
 @media only screen and (min-width: 768px) {
   .home-container {
-    height: 80vh;
+    height: 90vh;
   }
   .home-bottom {
-    margin-left: 12%;
     .home-left {
       width: 100%;
-      p {
+      .title-style-home {
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
   }
@@ -71,19 +66,24 @@
 @media only screen and (min-width: 1024px) {
   .home-container {
     height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
+
   .home-bottom {
-    margin-left: 12%;
+    margin: 0;
     .home-left {
       width: 100%;
-      p {
+      .title-style-home {
         font-weight: 700;
         font-size: 3rem;
+        margin-bottom: 48px;
+      }
+      .button-contactme {
+        height: 54px;
       }
     }
-  }
-  .button-contactme {
-    width: 70%;
-    height: 50px;
   }
 }
