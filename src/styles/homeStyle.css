@@ -59,7 +59,7 @@
   width: 65%;
   min-width: 130px;
   max-width: 180px;
-  height: 52px;
+  min-height: 52px;
   border-radius: 56px;
   border: rgba(55, 74, 103, 0.2) 3px solid;
   display: block;
@@ -80,7 +80,6 @@
   }
   .button-contactme {
     width: 60%;
-    height: 50px;
   }
 }
 
