@@ -81,7 +81,6 @@ const Card = () => {
         onMouseLeave={() => onMouseLeaveHandler(element)}
         key={element}
       >
-        {console.log(element)}
         <div className={`card-${element}`}>
           <div className="cardFace front">
             <img

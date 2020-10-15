@@ -12,22 +12,47 @@
     width: 80%;
     height: 90vh;
     margin: 0 auto;
+    .skill-title {
+      margin: 5% auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: $titlePhoneSize;
+    }
+
+    .skill-right {
+      display: none;
+    }
+
+    .skill-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      .skill-desc {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: justify;
+      }
+      .skill-right-mobile {
+        margin: 12px;
+        a {
+          text-decoration: none;
+        }
+        button {
+          width: 200px;
+          height: 40px;
+          border: rgba(55, 74, 103, 0.2) 3px solid;
+          display: block;
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
+          border-radius: 12px;
+        }
+      }
+    }
   }
-}
-.skill-title {
-  margin: 5% auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: $titlePhoneSize;
-}
-.skill-desc {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
@@ -44,13 +69,61 @@
   .skill-title {
     font-size: $titleTabletSize;
   }
+  .skill-left {
+    .skill-right-mobile {
+      button {
+        height: 100px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .skill-title {
-    font-size: $titleDesktopSize;
-  }
-  .skill-desc {
-    font-size: 1.3rem;
+  .skills-container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .skill-wrapper {
+      .skill-title {
+        margin: 5% auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: $titleDesktopSize;
+      }
+
+      .skill-right {
+        display: none;
+      }
+
+      .skill-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        .skill-desc {
+          font-size: 1rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-align: justify;
+        }
+        .skill-right-mobile {
+          margin: 12px;
+          a {
+            text-decoration: none;
+          }
+          button {
+            width: 200px;
+            height: 40px;
+            border: rgba(55, 74, 103, 0.2) 3px solid;
+            display: block;
+            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
+            border-radius: 12px;
+          }
+        }
+      }
+    }
   }
 }
