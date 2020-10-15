@@ -17,7 +17,7 @@
   .navigation-image-social {
     width: 30px;
     margin: 0 8px;
-    flex: 2;
+    flex: 1;
   }
   .an-icon-container {
     display: flex;
@@ -59,9 +59,16 @@
   .header-container {
     justify-content: space-between;
     .navigation-image {
-      width: 50px;
+      width: 32px;
       margin: 0 25px;
       flex: 1;
+    }
+    .an-icon-container {
+      margin-left: 32px;
+
+      #an-icon {
+        width: 32px;
+      }
     }
     .navigation-image-social {
       width: 30px;
@@ -71,6 +78,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 32px;
     }
   }
 }
@@ -78,7 +86,8 @@
 @media only screen and (min-width: 1024px) {
   .header-container {
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
     width: 10vh;
     height: 100vh;
     top: 0;
@@ -91,14 +100,18 @@
       width: 40px;
       margin: 5px 10px;
     }
-    .an-container {
+    .an-icon-container {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      #an-icon {
+        width: 40px;
+      }
     }
     .navigation-container {
       flex-flow: column nowrap;
-
       width: 10vh;
       .navigation-button {
         display: flex;
@@ -153,7 +166,12 @@
       text-align: center;
     }
     .sosmed-container {
+      display: flex;
       flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-right: 0;
     }
   }
 }

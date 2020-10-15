@@ -26,24 +26,26 @@ const Header = () => {
   };
   const renderSosmed = sosmedList.map((element, index) => {
     return (
-      <a
-        href={
-          sosmedStr[index] === "linkedin"
-            ? "https://www.linkedin.com/in/arian-nurrahman/"
-            : "https://github.com/ariannurrahman"
-        }
-        key={`imagelink-${index}`}
-        className="navigation-social"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src={element}
-          alt="sosmed"
-          key={`header-${index}`}
-          className="navigation-image-social"
-        />
-      </a>
+      <div className="sosmed-wrapper">
+        <a
+          href={
+            sosmedStr[index] === "linkedin"
+              ? "https://www.linkedin.com/in/arian-nurrahman/"
+              : "https://github.com/ariannurrahman"
+          }
+          key={`imagelink-${index}`}
+          className="navigation-social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={element}
+            alt="sosmed"
+            key={`header-${index}`}
+            className="navigation-image-social"
+          />
+        </a>
+      </div>
     );
   });
   const navText = ["home", "about", "skills", "works", "contact"];

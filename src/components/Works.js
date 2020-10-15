@@ -11,7 +11,11 @@ const Works = () => {
       <div className="works-wrapper">
         <div className="works-title">Works</div>
         <div className="works-card">
-          <a rel="noopener noreferrer" href="https://beanary.netlify.app/">
+          <a
+            rel="noopener noreferrer"
+            href="https://beanary.netlify.app/"
+            id="works-link"
+          >
             <img src={beanary} alt="beanary" onClick={cardModalHandler} />
           </a>
 

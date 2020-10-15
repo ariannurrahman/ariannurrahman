@@ -48,31 +48,62 @@
 }
 
 .works-container .works-wrapper .works-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
-  padding: 24px;
   border-radius: 24px;
-}
-
-.works-container .works-wrapper .works-card img {
+  padding: 24px 12px;
   width: 100%;
 }
 
-.works-container .works-wrapper .works-card .card-title {
+.works-container .works-wrapper .works-card #works-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works-container .works-wrapper .works-card #works-link img {
+  text-align: center;
+  width: 80%;
+}
+
+.works-container .works-wrapper .works-card .modal-icon {
+  padding: 8px;
+}
+
+.works-container .works-wrapper .works-card .modal-icon .card-title {
   width: 100%;
   margin: 12px auto;
   font-weight: 700;
   font-size: 20px;
 }
 
-.works-container .works-wrapper .works-card .card-tech {
+.works-container .works-wrapper .works-card .modal-icon .card-tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 12px auto;
 }
 
-.works-container .works-wrapper .works-card .card-tech #tech {
+.works-container .works-wrapper .works-card .modal-icon .card-tech #tech {
   background-color: #374a67;
   margin-right: 8px;
   padding: 8px;
@@ -81,7 +112,22 @@
   letter-spacing: 0.4px;
 }
 
-.works-container .works-wrapper .works-card .card-desc {
+.works-container .works-wrapper .works-card .modal-icon .card-desc {
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .works-container .works-wrapper .works-title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .works-container {
+    width: 100%;
+  }
+  .works-container .works-wrapper .works-title {
+    font-size: 4rem;
+  }
 }
 /*# sourceMappingURL=works.css.map */

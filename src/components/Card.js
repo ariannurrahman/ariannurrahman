@@ -81,6 +81,7 @@ const Card = () => {
         onMouseLeave={() => onMouseLeaveHandler(element)}
         key={element}
       >
+        {console.log(element)}
         <div className={`card-${element}`}>
           <div className="cardFace front">
             <img
@@ -90,7 +91,7 @@ const Card = () => {
             />
           </div>
           <div className="cardFace back">
-            <h1>{element}</h1>
+            <h1>{element === "React" ? "ReactJs, Redux, Hooks" : element}</h1>
           </div>
         </div>
       </div>
