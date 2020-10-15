@@ -12,11 +12,22 @@
   position: absolute;
   top: 0;
   height: 10vh;
+  overflow-x: hidden;
   .navigation-image,
   .navigation-image-social {
     width: 30px;
-    margin: 0 10px;
-    flex: 1;
+    margin: 0 8px;
+    flex: 2;
+  }
+  .an-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30px;
+    #an-icon {
+      width: 30px;
+    }
   }
 
   .navigation-container {

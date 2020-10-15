@@ -7,6 +7,7 @@ const About = React.lazy(() => import("./About"));
 const Header = React.lazy(() => import("./Header"));
 const Skills = React.lazy(() => import("./Skills"));
 const Contact = React.lazy(() => import("./Contact"));
+const Works = React.lazy(() => import("./Works"));
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/about" exact component={About} />
           <Route path="/skills" exact component={Skills} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/works" exact component={Works} />
         </Suspense>
       </BrowserRouter>
     </div>

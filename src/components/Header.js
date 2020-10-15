@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import home from "../images/home.svg";
-import about from "../images/about.svg";
-import skills from "../images/brain.png";
+import about from "../images/user.svg";
+import skills from "../images/personal.svg";
+import works from "../images/works.svg";
 import contact from "../images/contact.svg";
+import burgermenu from "../images/burgermenu.png";
 import "../styles/headerStyle.css";
 
 import linkedin from "../images/linkedin.svg";
@@ -12,6 +14,16 @@ import an from "../images/an.svg";
 const Header = () => {
   const sosmedStr = ["linkedin", "github"];
   const sosmedList = [linkedin, github];
+  const [open, setOpen] = useState(false);
+  const [widthResolution, setWidthResolution] = useState(0);
+
+  useEffect(() => {
+    setWidthResolution(window.screen.width);
+  }, [setWidthResolution]);
+
+  const clickBurger = () => {
+    setOpen(!open);
+  };
   const renderSosmed = sosmedList.map((element, index) => {
     return (
       <a
@@ -34,8 +46,8 @@ const Header = () => {
       </a>
     );
   });
-  const navText = ["home", "about", "skills", "contact"];
-  const navList = [home, about, skills, contact];
+  const navText = ["home", "about", "skills", "works", "contact"];
+  const navList = [home, about, skills, works, contact];
   const renderNav = navList.map((element, index) => {
     return (
       <NavLink
@@ -43,8 +55,12 @@ const Header = () => {
         exact
         className="navigation-button"
         key={"navIcon" + index}
-        // activeStyle={{ borderBottom: "0.4px solid black" }}
-        // activeClassName="active"
+        activeStyle={{
+          boxShadow: " 0px 0px 4px 0px rgba(0,0,0,0.75)",
+          borderRadius: "12px",
+          backgroundColor: "gainsboro",
+        }}
+        onClick={clickBurger}
       >
         <img
           src={element}
@@ -61,14 +77,32 @@ const Header = () => {
   });
   return (
     <div className="header-container">
-      <div className="an-container">
+      <div className="an-icon-container">
         <NavLink to="/" exact>
-          <img src={an} alt="an" className="navigation-image skip-link" />
+          <img
+            src={an}
+            alt="an"
+            id="an-icon"
+            className="navigation-image skip-link"
+          />
         </NavLink>
       </div>
-
-      <div className="navigation-container">{renderNav}</div>
-
+      <div className="navigation-container">
+        {widthResolution > 1023 ? (
+          renderNav
+        ) : open ? (
+          renderNav
+        ) : (
+          <div className="navigation-button">
+            <img
+              src={burgermenu}
+              alt="burgermenu"
+              className="navigation-image"
+              onClick={clickBurger}
+            />
+          </div>
+        )}
+      </div>
       <div className="sosmed-container">{renderSosmed}</div>
     </div>
   );
