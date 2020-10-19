@@ -5,7 +5,6 @@ import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import gsap from "gsap";
-const Footer = React.lazy(() => import("./Footer"));
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -132,7 +131,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <Footer />
         {success ? emailResponse() : null}
       </div>
     </div>

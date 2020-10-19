@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/skillStyle.css";
 import "../styles/mainstyle.css";
-const Card = React.lazy(() => import("./Card"));
+// const Card = React.lazy(() => import("./Card"));
+// const Card = React.lazy(() => import("./Card"));
+import Card from "./Card";
 
 const Skills = () => {
   return (
