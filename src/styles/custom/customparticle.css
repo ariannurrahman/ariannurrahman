@@ -10,6 +10,7 @@
 
 .particle-container .particle-content {
   z-index: 1;
+  display: block;
   position: relative;
   width: 100%;
   height: 100%;

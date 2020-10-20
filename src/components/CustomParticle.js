@@ -15,7 +15,57 @@ const CustomParticle = () => {
         params={{
           particles: {
             number: {
-              value: widthResolution >= 1024 ? 88 : 40,
+              value: widthResolution >= 1023 ? 150 : 50,
+            },
+            size: {
+              value: 0,
+            },
+            line_linked: {
+              enable: true,
+              distance: widthResolution >= 1023 ? 200 : 130,
+              color: "#a9a9a9",
+              opacity: 0.5,
+              width: 2.3,
+            },
+            move: {
+              enable: true,
+              speed: 3,
+              direction: "none",
+              random: true,
+              out_mode: "bounce",
+              bounce: true,
+            },
+          },
+
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onclick: {
+                enable: true,
+                mode: "repulse",
+              },
+            },
+            modes: {
+              repulse: {
+                distance: 500,
+                duration: 0.1,
+                speed: 20,
+              },
+            },
+          },
+          retina_detect: true,
+        }}
+      />
+      {/* <Particles
+        className="particle-content"
+        params={{
+          particles: {
+            number: {
+              value: 50,
               density: {
                 enable: true,
                 value_area: 3000,
@@ -30,21 +80,13 @@ const CustomParticle = () => {
                 width: 5,
                 color: "#a4b8c4",
               },
-              polygon: {
-                nb_sides: 5,
-              },
-              image: {
-                src: "img/github.svg",
-                width: 100,
-                height: 100,
-              },
             },
             opacity: {
-              value: 0.19240944730386272,
+              value: 0.4,
               random: false,
               anim: {
                 enable: false,
-                speed: 1,
+                speed: 3,
                 opacity_min: 0.1,
                 sync: false,
               },
@@ -61,7 +103,7 @@ const CustomParticle = () => {
             },
             line_linked: {
               enable: true,
-              distance: widthResolution >= 1024 ? 150 : 100,
+              distance: 100,
               color: "#a4b8c4",
               opacity: 0.5,
               width: 2.3,
@@ -88,10 +130,7 @@ const CustomParticle = () => {
                 enable: true,
                 mode: "repulse",
               },
-              onclick: {
-                enable: true,
-                mode: "push",
-              },
+
               resize: true,
             },
             modes: {
@@ -122,7 +161,7 @@ const CustomParticle = () => {
           },
           retina_detect: true,
         }}
-      />
+      /> */}
     </div>
   );
 };
