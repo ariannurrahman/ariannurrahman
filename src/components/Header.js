@@ -26,7 +26,7 @@ const Header = () => {
   };
   const renderSosmed = sosmedList.map((element, index) => {
     return (
-      <div className="sosmed-wrapper">
+      <div className="sosmed-wrapper" key={index}>
         <a
           href={
             sosmedStr[index] === "linkedin"

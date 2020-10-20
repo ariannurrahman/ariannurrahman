@@ -1,12 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import "../styles/homeStyle.css";
 import "../styles/mainstyle.css";
 import gsap from "gsap";
-
+import Loader from "./Loader";
+import CustomParticle from "./CustomParticle";
 const Home = () => {
+  const [loading, setLoading] = useState(null);
   const history = useHistory();
+
+  useEffect(() => {
+    if (CustomParticle) {
+      setLoading(true);
+    }
+  }, [setLoading]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -39,26 +47,37 @@ const Home = () => {
     );
   });
 
-  return (
-    <div className="home-container">
-      <div className="home-bottom">
-        <div className="home-left">
-          <div className="title-style-home">Hi!</div>
+  const renderHome = () => {
+    if (loading) {
+      return (
+        <React.Fragment>
+          <div className="home-container">
+            <div className="home-bottom">
+              <div className="home-left">
+                <div className="title-style-home">Hi!</div>
 
-          <div className="title-style-home">I'm Arian,</div>
+                <div className="title-style-home">I'm Arian,</div>
 
-          <div className="title-style-home">Web Developer</div>
+                <div className="title-style-home">Web Developer</div>
 
-          <button
-            onClick={() => history.push("/contact")}
-            className="button-contactme"
-          >
-            Contact Me
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+                <button
+                  onClick={() => history.push("/contact")}
+                  className="button-contactme"
+                >
+                  Contact Me
+                </button>
+              </div>
+            </div>
+          </div>
+          <CustomParticle />
+        </React.Fragment>
+      );
+    } else {
+      return <Loader />;
+    }
+  };
+
+  return renderHome();
 };
 
 export default Home;

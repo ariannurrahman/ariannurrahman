@@ -4,7 +4,6 @@ import "../styles/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-import gsap from "gsap";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -39,18 +38,7 @@ const Contact = () => {
       </div>
     );
   };
-  useEffect(() => {
-    gsap.fromTo(
-      ".form-response",
-      { opacity: 0, scale: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        ease: "elastic",
-        duration: 0.75,
-      }
-    );
-  });
+
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXJpYW5kcm9pZCIsImEiOiJja2FiM2VhbTEwdXBoMnJqcDRndW94YmwxIn0.lOrYJvwhR54494WrMWNWUA";

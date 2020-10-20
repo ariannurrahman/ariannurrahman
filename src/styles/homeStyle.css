@@ -15,6 +15,8 @@
           flex-flow: column wrap;
   color: #0e1116;
   overflow: hidden;
+  z-index: 20;
+  position: relative;
 }
 
 .home-bottom {
@@ -28,6 +30,8 @@
   -ms-flex-line-pack: center;
       align-content: center;
   height: 50%;
+  z-index: 20;
+  position: relative;
 }
 
 .home-bottom .home-left {
@@ -51,9 +55,9 @@
   margin-bottom: 32px;
 }
 
-.home-bottom .button-contactme {
+.home-bottom .home-left .button-contactme {
   color: #0e1116;
-  background-color: transparent;
+  background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1em;
   width: 65%;

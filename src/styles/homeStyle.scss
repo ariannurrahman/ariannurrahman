@@ -8,6 +8,8 @@
   flex-flow: column wrap;
   color: $darkGreen;
   overflow: hidden;
+  z-index: 20;
+  position: relative;
 }
 
 .home-bottom {
@@ -16,6 +18,9 @@
   justify-content: center;
   align-content: center;
   height: 50%;
+  z-index: 20;
+  position: relative;
+
   .home-left {
     display: flex;
     flex-flow: column nowrap;
@@ -27,20 +32,20 @@
       font-size: $titlePhoneSize;
       margin-bottom: 32px;
     }
-  }
-  .button-contactme {
-    color: $darkGreen;
-    background-color: transparent;
-    font-weight: 700;
-    font-size: 1em;
-    width: 65%;
-    min-width: 130px;
-    max-width: 180px;
-    min-height: 52px;
-    border-radius: 56px;
-    border: rgba(55, 74, 103, 0.2) 3px solid;
-    display: block;
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
+    .button-contactme {
+      color: $darkGreen;
+      background-color: $BGcolor;
+      font-weight: 700;
+      font-size: 1em;
+      width: 65%;
+      min-width: 130px;
+      max-width: 180px;
+      min-height: 52px;
+      border-radius: 56px;
+      border: rgba(55, 74, 103, 0.2) 3px solid;
+      display: block;
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
+    }
   }
 }
 
