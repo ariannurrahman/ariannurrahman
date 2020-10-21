@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/aboutStyle.css";
 import "../styles/mainstyle.css";
-import arian from "../images/arian.jpeg";
+import arian from "../images/arian.webp";
 import contact from "../images/contact.svg";
 import { useHistory } from "react-router-dom";
 import gsap from "gsap";
@@ -16,29 +16,25 @@ const About = () => {
   useEffect(() => {
     gsap.fromTo(
       ".slide",
-      { opacity: 0, transform: "translateX(-100%)" },
+      { transform: "translateX(-150%)", autoAlpha: 0 },
       {
-        duration: 2,
-        stagger: 0.75,
-        ease: "expo",
+        autoAlpha: 1,
+        duration: 0.8,
+        stagger: 0.5,
+        ease: "power4.out",
         transform: "translateX(0%)",
-        paused: false,
-        opacity: 1,
       }
     );
-  });
 
-  useEffect(() => {
     gsap.fromTo(
       ".about-contact",
-      { opacity: 0, scale: 0 },
+      { autoAlpha: 0, scale: 0 },
       {
         delay: 1,
-        duration: 1,
+        duration: 0.5,
         scale: 1,
-        ease: "back",
-        paused: false,
-        opacity: 1,
+        ease: "power1.inOut",
+        autoAlpha: 1,
       }
     );
   });
@@ -46,10 +42,10 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="about-wrapper">
-        <div className="about-title">About Me</div>
+        <div className="about-title slide">About Me</div>
         <div className="about-bottom">
-          <div className="bottom-left">
-            <img src={arian} alt="Me on grass" />
+          <div className="bottom-left slide">
+            <img src={arian} alt="Me on grass" id="anphoto" />
           </div>
           <div className="bottom-right">
             <div className="bottom-text slide">

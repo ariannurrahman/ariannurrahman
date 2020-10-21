@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import "../styles/mainstyle.css";
-import "../styles/footerStyle.css";
+import "../styles/contact/informations.css";
 import gmail from "../images/gmail.svg";
 import github from "../images/github.svg";
 import linkedin from "../images/linkedin.svg";
 import gsap from "gsap";
 
-const Footer = () => {
+const Informations = () => {
   const contactList = [linkedin, gmail, github];
+  // const [loading, setLoading] = useState(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -44,7 +45,17 @@ const Footer = () => {
     );
   });
 
-  return <div className="footer-contact">{renderContact}</div>;
+  return (
+    <div className="info-contact">
+      <div className="info-wrapper">
+        <div className="info-top">
+          <div className="info-title">Contact Information</div>
+          <input type="button" value="V" />
+        </div>
+        <div className="info-bottom"></div>
+      </div>
+    </div>
+  );
 };
 
-export default Footer;
+export default Informations;

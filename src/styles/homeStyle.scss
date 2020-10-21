@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center;
   align-content: flex-start;
-  height: 90vh;
-  margin-top: 10vh;
+  height: 100%;
+  width: 100%;
+  margin-top: 30vh;
   flex-flow: column wrap;
   color: $darkGreen;
   overflow: hidden;
@@ -51,7 +52,7 @@
 
 @media only screen and (min-width: 768px) {
   .home-container {
-    height: 90vh;
+    margin-top: 30vh;
   }
   .home-bottom {
     .home-left {
@@ -69,8 +70,8 @@
 
 @media only screen and (min-width: 1024px) {
   .home-container {
-    height: 100vh;
-    margin: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;

@@ -1,17 +1,15 @@
 @import "./utility/variable.scss";
 
 .card-container {
-  margin: 5px;
-  display: flex;
+  @include centerAllFlex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  height: 100%;
   margin: 16px auto;
-
   padding: 20px 0;
   border-radius: 20px;
-  box-shadow: inset 0px 0px 35px -7px rgba(0, 0, 0, 0.6);
+  background-color: $BGcolor;
+  box-shadow: inset 0px 0px 16px -7px rgba(0, 0, 0, 0.6);
 }
 .cardWrapper {
   width: 100px;
@@ -19,16 +17,13 @@
   position: relative;
   float: left;
   margin: 8px 8px 8px 8px;
-
   -webkit-font-smoothing: antialiased;
 }
 
 .cardFace {
-  display: flex;
+  @include centerAllFlex;
   border-radius: 4px;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   width: 100px;
   height: 100px;
@@ -58,12 +53,23 @@
 
 @media only screen and (min-width: 768px) {
   .cardWrapper {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
 
   .cardFace {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1024) {
+  .cardWrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cardFace {
+    width: 100px;
+    height: 100px;
   }
 }

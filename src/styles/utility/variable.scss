@@ -5,6 +5,33 @@ $actColor: rgb(56, 108, 11); // pakistan green
 $darkGreen: rgb(14, 17, 22); //rich black fogra
 $titlePhoneSize: 2rem;
 $titleTabletSize: 3rem;
-$titleDesktopSize: 4rem;
+$titleDesktopSize: 3.5rem;
+
+@mixin centerAllFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mobileTitle {
+  margin: 5% auto;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@mixin tabletTitle {
+  font-size: 3rem;
+}
+
+@mixin desktopTitle {
+  font-size: 3.5rem;
+}
+
+@mixin mobileDesc {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: justify;
+}
 
 // https://coolors.co/e5e5e5-0e1116-374a67-616283-9e7b9b

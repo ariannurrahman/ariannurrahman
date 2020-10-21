@@ -1,24 +1,25 @@
 .card-container {
-  margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
+  height: 100%;
   margin: 16px auto;
   padding: 20px 0;
   border-radius: 20px;
-  -webkit-box-shadow: inset 0px 0px 35px -7px rgba(0, 0, 0, 0.6);
-          box-shadow: inset 0px 0px 35px -7px rgba(0, 0, 0, 0.6);
+  background-color: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 16px -7px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0px 0px 16px -7px rgba(0, 0, 0, 0.6);
 }
 
 .cardWrapper {
@@ -34,17 +35,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 4px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: absolute;
   width: 100px;
   height: 100px;
@@ -76,12 +77,23 @@
 
 @media only screen and (min-width: 768px) {
   .cardWrapper {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
   .cardFace {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (min-width: 1024) {
+  .cardWrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .cardFace {
+    width: 100px;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=card.css.map */

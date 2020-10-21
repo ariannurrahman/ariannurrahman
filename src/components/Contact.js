@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../styles/mainstyle.css";
-import "../styles/contactStyle.css";
+import "../styles/contact/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-
+import gsap from "gsap";
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [wait, setWait] = useState(false);
@@ -42,8 +42,8 @@ const Contact = () => {
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXJpYW5kcm9pZCIsImEiOiJja2FiM2VhbTEwdXBoMnJqcDRndW94YmwxIn0.lOrYJvwhR54494WrMWNWUA";
-    const initializeMap = ({ setMap, mapContainer }) => {
-      const map = new mapboxgl.Map({
+    const initializeMap = async ({ setMap, mapContainer }) => {
+      const map = await new mapboxgl.Map({
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
         center: [107.64809, -6.964609],
@@ -57,6 +57,18 @@ const Contact = () => {
         setMap(map);
         map.resize();
       });
+
+      gsap.fromTo(
+        ".slide",
+        { transform: "translateX(-150%)", autoAlpha: 0 },
+        {
+          autoAlpha: 1,
+          duration: 0.8,
+          stagger: 0.5,
+          ease: "power4.out",
+          transform: "translateX(0%)",
+        }
+      );
     };
 
     if (!map) initializeMap({ setMap, mapContainer });
@@ -64,20 +76,20 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <div className="contact-title">Contact Me</div>
-      <div className="contact-greeting">
+      <div className="contact-title slide">Contact Me</div>
+      <div className="contact-greeting slide">
         If you have any question or want to talk, don't hesitate to contact me
         using the form below.
       </div>
-      <div className="contact-map-form">
-        <div className="contact-top">
+      <div className="contact-map-form ">
+        <div className="contact-top slide">
           <div
             id="mapboxgl"
             ref={(el) => (mapContainer.current = el)}
             style={{ borderRadius: "8px" }}
           ></div>
         </div>
-        <div className="contact-bottom">
+        <div className="contact-bottom slide">
           <div className="contact-bottom__top">
             <form
               id="contact"
@@ -121,6 +133,7 @@ const Contact = () => {
         </div>
         {success ? emailResponse() : null}
       </div>
+      {/* <Informations /> */}
     </div>
   );
 };

@@ -2,86 +2,80 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   width: 100%;
   height: 100%;
   position: relative;
+  color: #0e1116;
+  z-index: 30;
 }
 
 .skills-container .skill-wrapper {
   width: 80%;
-  height: 90vh;
+  height: 100%;
   margin: 0 auto;
 }
 
 .skills-container .skill-wrapper .skill-title {
   margin: 5% auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 700;
   font-size: 2rem;
 }
 
-.skills-container .skill-wrapper .skill-right {
+.skills-container .skill-wrapper .skill-bottom .skill-right {
   display: none;
 }
 
-.skills-container .skill-wrapper .skill-left {
+.skills-container .skill-wrapper .skill-bottom .skill-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
 
-.skills-container .skill-wrapper .skill-left .skill-desc {
+.skills-container .skill-wrapper .skill-bottom .skill-left .skill-desc {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-align: justify;
 }
 
-.skills-container .skill-wrapper .skill-left .skill-right-mobile {
+.skills-container .skill-wrapper .skill-bottom .skill-left .skill-right-mobile {
   margin: 12px;
 }
 
-.skills-container .skill-wrapper .skill-left .skill-right-mobile a {
+.skills-container .skill-wrapper .skill-bottom .skill-left .skill-right-mobile a {
   text-decoration: none;
 }
 
-.skills-container .skill-wrapper .skill-left .skill-right-mobile button {
+.skills-container .skill-wrapper .skill-bottom .skill-left .skill-right-mobile button {
   width: 200px;
   height: 40px;
+  margin: 12px 0 4px 0;
   border: rgba(55, 74, 103, 0.2) 3px solid;
   display: block;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
-          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 768px) {
@@ -93,12 +87,14 @@
     height: 90vh;
     width: 90%;
     margin: 0 auto;
-    color: #0e1116;
   }
-  .skill-desc {
+  .skills-container .skill-wrapper .skill-desc {
     font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: justify;
   }
-  .skill-title {
+  .skills-container .skill-wrapper .skill-title {
     font-size: 3rem;
   }
   .skill-left .skill-right-mobile button {
@@ -107,68 +103,8 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .skills-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-  }
   .skills-container .skill-wrapper .skill-title {
-    margin: 5% auto;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-weight: 700;
-    font-size: 4rem;
-  }
-  .skills-container .skill-wrapper .skill-right {
-    display: none;
-  }
-  .skills-container .skill-wrapper .skill-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-  }
-  .skills-container .skill-wrapper .skill-left .skill-desc {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: justify;
-  }
-  .skills-container .skill-wrapper .skill-left .skill-right-mobile {
-    margin: 12px;
-  }
-  .skills-container .skill-wrapper .skill-left .skill-right-mobile a {
-    text-decoration: none;
-  }
-  .skills-container .skill-wrapper .skill-left .skill-right-mobile button {
-    width: 200px;
-    height: 40px;
-    border: rgba(55, 74, 103, 0.2) 3px solid;
-    display: block;
-    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
-            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.24);
-    border-radius: 12px;
+    font-size: 3.5rem;
   }
 }
 /*# sourceMappingURL=skillStyle.css.map */

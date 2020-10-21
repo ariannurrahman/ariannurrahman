@@ -1,22 +1,19 @@
-@import "./utility/variable.scss";
+@import "../utility/variable.scss";
 .contact-container {
-  display: flex;
+  @include centerAllFlex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
   position: relative;
   width: 80%;
-  height: 85vh;
+  height: 100%;
   margin: 0 auto;
   color: $darkGreen;
   overflow-x: hidden;
   flex-wrap: nowrap;
+  z-index: 80;
 }
 
 .contact-title {
-  margin: 5% auto;
-  font-weight: 700;
-  font-size: 2em;
+  @include mobileTitle;
 }
 
 .contact-greeting {
@@ -123,9 +120,7 @@
 
 @media only screen and (min-width: 768px) {
   .contact-title {
-    margin: 5% auto;
-    font-weight: 700;
-    font-size: $titleTabletSize;
+    @include tabletTitle;
   }
   .contact-map-form {
     justify-content: center;
@@ -195,9 +190,7 @@
     height: 100vh;
   }
   .contact-title {
-    margin: 5% auto;
-    font-weight: 700;
-    font-size: $titleDesktopSize;
+    @include desktopTitle;
   }
   .contact-greeting {
     text-align: justify;

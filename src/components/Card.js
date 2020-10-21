@@ -24,14 +24,13 @@ const Card = () => {
   useEffect(() => {
     gsap.fromTo(
       ".slide",
-      { opacity: 0, transform: "translateX(-100%)" },
+      { transform: "translateX(-150%)", autoAlpha: 0 },
       {
-        duration: 2,
-        stagger: 0.75,
-        ease: "expo",
+        autoAlpha: 1,
+        duration: 0.8,
+        stagger: 0.5,
+        ease: "power4.out",
         transform: "translateX(0%)",
-        paused: false,
-        opacity: 1,
       }
     );
   });
@@ -96,7 +95,7 @@ const Card = () => {
       </div>
     );
   });
-  return <div className="card-container">{renderSkillsSet}</div>;
+  return <div className="card-container slide">{renderSkillsSet}</div>;
 };
 
 export default Card;
