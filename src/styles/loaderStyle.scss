@@ -9,6 +9,7 @@
   opacity: 1;
   position: absolute;
   top: 0;
+  left: 0;
   background-color: $BGcolor;
   .loader-wrapper {
     display: flex;
@@ -32,4 +33,7 @@
   to {
     transform: translateY(-80px) rotateY(360deg);
   }
+}
+
+@media only screen and (min-width: 1024px) {
 }

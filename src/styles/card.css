@@ -23,8 +23,8 @@
 }
 
 .cardWrapper {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   position: relative;
   float: left;
   margin: 8px 8px 8px 8px;
@@ -47,8 +47,8 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   overflow: hidden;
 }
 

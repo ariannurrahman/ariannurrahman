@@ -22,13 +22,13 @@ const CustomParticle = () => {
               },
             },
             size: {
-              value: 0,
+              value: 2,
             },
             line_linked: {
               enable: true,
               distance: widthResolution >= 1023 ? 250 : 125,
-              color: "#a9a9a9",
-              opacity: 0.5,
+              color: "#ffffff",
+              opacity: 1,
               width: 2.3,
             },
             move: {

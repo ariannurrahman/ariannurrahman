@@ -27,8 +27,8 @@ const Card = () => {
       { autoAlpha: 0 },
       {
         autoAlpha: 1,
-        duration: 0.5,
-        stagger: 0.2,
+        duration: 0.8,
+        stagger: 0.4,
         ease: "power4.out",
       }
     );

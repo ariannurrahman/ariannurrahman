@@ -87,8 +87,8 @@
   .header-container {
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: flex-end;
-    width: 10vh;
+    align-items: center;
+    width: 12vh;
     height: 100vh;
     top: 0;
     left: 0;
@@ -97,7 +97,7 @@
     border-bottom: 0;
     .navigation-image,
     .navigation-image-social {
-      width: 40px;
+      width: 30px;
       margin: 5px 10px;
     }
     .an-icon-container {
