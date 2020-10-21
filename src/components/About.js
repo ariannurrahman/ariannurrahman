@@ -16,25 +16,12 @@ const About = () => {
   useEffect(() => {
     gsap.fromTo(
       ".slide",
-      { transform: "translateX(-150%)", autoAlpha: 0 },
+      { autoAlpha: 0 },
       {
         autoAlpha: 1,
-        duration: 0.8,
-        stagger: 0.5,
-        ease: "power4.out",
-        transform: "translateX(0%)",
-      }
-    );
-
-    gsap.fromTo(
-      ".about-contact",
-      { autoAlpha: 0, scale: 0 },
-      {
-        delay: 1,
         duration: 0.5,
-        scale: 1,
-        ease: "power1.inOut",
-        autoAlpha: 1,
+        stagger: 0.2,
+        ease: "power4.out",
       }
     );
   });
@@ -53,7 +40,7 @@ const About = () => {
               source, and the web platform.
             </div>
 
-            <div className="about-contact" onClick={onClickHandler}>
+            <div className="about-contact slide" onClick={onClickHandler}>
               <img src={contact} alt="contact me" />
             </div>
 
