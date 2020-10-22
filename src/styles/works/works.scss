@@ -1,22 +1,11 @@
 @import "../utility/variable.scss";
 
 .works-container {
-  @include centerAllFlex;
-  flex-flow: column nowrap;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  color: $darkGreen;
-  z-index: 80;
+  @include containerStyle;
+
   .works-wrapper {
-    @include centerAllFlex;
-    flex-flow: column nowrap;
-    position: relative;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    color: $darkGreen;
+    @include wrapperStyle;
+
     .works-title {
       @include mobileTitle;
     }

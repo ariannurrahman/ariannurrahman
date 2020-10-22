@@ -13,30 +13,33 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   position: relative;
-  width: 80%;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
   color: #0e1116;
-  overflow-x: hidden;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   z-index: 80;
+  top: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
 }
 
-.contact-title {
+.contact-container .contact-title {
   margin: 5% auto;
   font-weight: 700;
+  text-align: center;
   font-size: 2rem;
 }
 
-.contact-greeting {
+.contact-container .contact-greeting {
   text-align: justify;
   font-weight: 600;
   font-size: 1em;
   margin-bottom: 5%;
 }
 
-.contact-map-form {
+.contact-container .contact-map-form {
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,7 +50,7 @@
           flex-flow: column nowrap;
 }
 
-.contact-map-form .contact-top {
+.contact-container .contact-map-form .contact-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,12 +64,12 @@
   width: 100%;
 }
 
-.contact-map-form .contact-top #mapboxgl {
+.contact-container .contact-map-form .contact-top #mapboxgl {
   width: 100%;
   height: 15vh;
 }
 
-.contact-map-form .contact-bottom {
+.contact-container .contact-map-form .contact-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +87,7 @@
           align-items: center;
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form .half-top {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,12 +96,12 @@
           justify-content: space-between;
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form .half-top input {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-top input {
   width: 48%;
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form div > input,
-.contact-map-form .contact-bottom .contact-bottom__top form textarea {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form div > input,
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form textarea {
   height: 35px;
   width: 100%;
   margin-bottom: 1.3vh;
@@ -112,7 +115,7 @@
   padding: 10px;
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
   width: 50%;
   padding: 0px;
   height: 35px;
@@ -123,7 +126,7 @@
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +142,7 @@
           align-items: center;
 }
 
-.contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
+.contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
   height: 15vh;
   max-height: 20vh;
   max-width: 100%;
@@ -183,10 +186,11 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-title {
+  .contact-container .contact-title {
+    text-align: center;
     font-size: 3rem;
   }
-  .contact-map-form {
+  .contact-container .contact-map-form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -200,35 +204,35 @@
     width: 100%;
     height: 50vh;
   }
-  .contact-map-form .contact-top {
+  .contact-container .contact-map-form .contact-top {
     height: 100%;
     margin: 0 5px;
     padding: 20px;
   }
-  .contact-map-form .contact-top #mapboxgl {
+  .contact-container .contact-map-form .contact-top #mapboxgl {
     height: 85%;
     border: 1px solid rgba(55, 74, 103, 0.5);
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.28);
             box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.28);
     border-radius: 8px;
   }
-  .contact-map-form .contact-bottom {
+  .contact-container .contact-map-form .contact-bottom {
     height: 100%;
     margin: 0 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .contact-map-form .contact-bottom .contact-bottom__top form div > input,
-  .contact-map-form .contact-bottom .contact-bottom__top form textarea {
+  .contact-container .contact-map-form .contact-bottom .contact-bottom__top form div > input,
+  .contact-container .contact-map-form .contact-bottom .contact-bottom__top form textarea {
     height: 40px;
     margin-bottom: 1.5vh;
   }
-  .contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
+  .contact-container .contact-map-form .contact-bottom .contact-bottom__top form div > input[type="submit"] {
     height: 40px;
     border-radius: 20px;
   }
-  .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
+  .contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -243,7 +247,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
+  .contact-container .contact-map-form .contact-bottom .contact-bottom__top form .half-bottom #contact-textarea {
     height: 20vh;
     max-height: 20vh;
     max-width: 100%;
@@ -265,6 +269,7 @@
     height: 100vh;
   }
   .contact-title {
+    text-align: center;
     font-size: 3.5rem;
   }
   .contact-greeting {

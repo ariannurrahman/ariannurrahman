@@ -1,0 +1,72 @@
+.socialmedia-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.socialmedia-container .socialmedia-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.socialmedia-container .socialmedia-wrapper .socialmedia-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  width: 50px;
+  padding: 24px;
+  margin: 20px;
+  background-color: rgba(229, 229, 229, 0.4);
+  border: 3px solid rgba(55, 74, 103, 0.1);
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.37);
+          box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.37);
+}
+
+.socialmedia-container .socialmedia-wrapper .socialmedia-link-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+.socialmedia-container .socialmedia-wrapper .socialmedia-link-container a img {
+  width: 48px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .socialmedia-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=socialmedia.css.map */

@@ -36,4 +36,16 @@ body {
   height: 50vh;
   color: #0e1116;
 }
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter,
+.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms ease-in;
+  transition: opacity 1000ms ease-in;
+}
 /*# sourceMappingURL=mainStyle.css.map */

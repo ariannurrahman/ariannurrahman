@@ -50,7 +50,7 @@
       display: none;
     }
   }
-  .sosmed-container {
+  .header-sosmed-container {
     display: none;
   }
 }
@@ -74,7 +74,7 @@
       width: 30px;
       flex: 1;
     }
-    .sosmed-container {
+    .header-sosmed-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -165,7 +165,7 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
-    .sosmed-container {
+    .header-sosmed-container {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;

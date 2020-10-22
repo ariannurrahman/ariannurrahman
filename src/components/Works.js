@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/works/works.css";
 import beanary from "../images/works/beanary.png";
-import gsap from "gsap";
 const Works = () => {
   const [open, setOpen] = useState(false);
   const cardModalHandler = () => {
     setOpen(!open);
   };
-
-  useEffect(() => {
-    gsap.fromTo(
-      ".slide",
-      { transform: "translateX(-150%)", autoAlpha: 0 },
-      {
-        autoAlpha: 1,
-        duration: 0.8,
-        stagger: 0.5,
-        ease: "power4.out",
-        transform: "translateX(0%)",
-      }
-    );
-  });
 
   return (
     <div className="works-container">
@@ -31,7 +16,7 @@ const Works = () => {
             rel="noopener noreferrer"
             href="https://beanary.netlify.app/"
             id="works-link"
-            // target="__blank"
+            target="__blank"
           >
             <img src={beanary} alt="beanary" onClick={cardModalHandler} />
           </a>

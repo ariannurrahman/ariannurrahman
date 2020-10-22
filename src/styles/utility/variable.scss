@@ -7,6 +7,25 @@ $titlePhoneSize: 2rem;
 $titleTabletSize: 3rem;
 $titleDesktopSize: 3.5rem;
 
+@mixin containerStyle {
+  @include centerAllFlex;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  color: $darkGreen;
+  z-index: 80;
+  top: 0;
+}
+
+@mixin wrapperStyle {
+  @include centerAllFlex;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 80%;
+}
+
 @mixin centerAllFlex {
   display: flex;
   align-items: center;
@@ -16,14 +35,17 @@ $titleDesktopSize: 3.5rem;
 @mixin mobileTitle {
   margin: 5% auto;
   font-weight: 700;
+  text-align: center;
   font-size: 2rem;
 }
 
 @mixin tabletTitle {
+  text-align: center;
   font-size: 3rem;
 }
 
 @mixin desktopTitle {
+  text-align: center;
   font-size: 3.5rem;
 }
 

@@ -1,0 +1,88 @@
+@import "../utility/variable.scss";
+
+.info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  width: 100%;
+  color: black;
+  border-radius: 12px;
+  position: fixed;
+  top: 10vh;
+  z-index: 90;
+
+  .arrow-wrapper {
+    @include centerAllFlex;
+    width: 12px;
+    background-color: rgba($BGcolor, 1);
+    transform: translateX(5vw);
+    transition: all 0.4s ease-in;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    z-index: 99;
+    img {
+      width: 28px;
+      opacity: 1;
+    }
+    &.active {
+      transform: translateX(90vw);
+    }
+  }
+  .info-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba($BGcolor, 1);
+    color: black;
+    position: absolute;
+    border-radius: 12px;
+    transform: translateX(-150%);
+    transition: all 0.4s ease-in;
+
+    &.active {
+      transform: translateX(0%);
+    }
+
+    .content-wrapper {
+      @include centerAllFlex;
+      flex-flow: column nowrap;
+      width: 100vw;
+      background-color: rgba($BGcolor, 1);
+      padding-bottom: 24px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba($borderColor, 0.2);
+      .icon-wrapper {
+        @include centerAllFlex;
+        flex-flow: column nowrap;
+        padding-top: 12px;
+        margin: 8px 0 8px 0;
+        width: 200px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba($borderColor, 0.2);
+        border-radius: 8px;
+        p {
+          font-size: 14px;
+          font-weight: 700;
+        }
+        img {
+          width: 32px;
+        }
+      }
+    }
+
+    #contact-link {
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .info-container {
+    display: none;
+  }
+}

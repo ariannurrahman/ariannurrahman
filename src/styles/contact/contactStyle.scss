@@ -1,89 +1,81 @@
 @import "../utility/variable.scss";
 .contact-container {
-  @include centerAllFlex;
-  flex-flow: column nowrap;
+  @include containerStyle;
+  justify-content: flex-start;
   position: relative;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  color: $darkGreen;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
-  z-index: 80;
-}
-
-.contact-title {
-  @include mobileTitle;
-}
-
-.contact-greeting {
-  text-align: justify;
-  font-weight: 600;
-  font-size: 1em;
-  margin-bottom: 5%;
-}
-.contact-map-form {
-  overflow: hidden;
-  display: flex;
-  flex-flow: column nowrap;
-  .contact-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    #mapboxgl {
-      width: 100%;
-      height: 15vh;
-    }
+  .contact-title {
+    @include mobileTitle;
   }
-  .contact-bottom {
+  .contact-greeting {
+    text-align: justify;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 5%;
+  }
+
+  .contact-map-form {
+    overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
-    margin: 5% auto;
-    justify-content: center;
-    align-items: center;
-    .contact-bottom__top {
-      form {
-        .half-top {
-          display: flex;
-          justify-content: space-between;
-          input {
-            width: 48%;
+    .contact-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 100%;
+      #mapboxgl {
+        width: 100%;
+        height: 15vh;
+      }
+    }
+    .contact-bottom {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      margin: 5% auto;
+      justify-content: center;
+      align-items: center;
+      .contact-bottom__top {
+        form {
+          .half-top {
+            display: flex;
+            justify-content: space-between;
+            input {
+              width: 48%;
+            }
           }
-        }
-        div > input,
-        textarea {
-          height: 35px;
-          width: 100%;
-          margin-bottom: 1.3vh;
-          border: 1px solid rgba($borderColor, 0.5);
-          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.28);
-          border-radius: 8px;
-          background-color: white;
-          box-sizing: border-box;
-          padding: 10px;
-        }
-        div > input[type="submit"] {
-          width: 50%;
-          padding: 0px;
-          height: 35px;
-          display: block;
-          border-radius: 56px;
-          border: rgba($borderColor, 0.2) 1px solid;
-          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
-        }
+          div > input,
+          textarea {
+            height: 35px;
+            width: 100%;
+            margin-bottom: 1.3vh;
+            border: 1px solid rgba($borderColor, 0.5);
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.28);
+            border-radius: 8px;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 10px;
+          }
+          div > input[type="submit"] {
+            width: 50%;
+            padding: 0px;
+            height: 35px;
+            display: block;
+            border-radius: 56px;
+            border: rgba($borderColor, 0.2) 1px solid;
+            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.28);
+          }
 
-        .half-bottom {
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          align-items: center;
-          #contact-textarea {
-            height: 15vh;
-            max-height: 20vh;
-            max-width: 100%;
+          .half-bottom {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            #contact-textarea {
+              height: 15vh;
+              max-height: 20vh;
+              max-width: 100%;
+            }
           }
         }
       }
@@ -119,53 +111,55 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-title {
-    @include tabletTitle;
-  }
-  .contact-map-form {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    width: 100%;
-    height: 50vh;
-    .contact-top {
-      height: 100%;
-      margin: 0 5px;
-      padding: 20px;
-
-      #mapboxgl {
-        height: 85%;
-        border: 1px solid rgba($borderColor, 0.5);
-        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.28);
-        border-radius: 8px;
-      }
+  .contact-container {
+    .contact-title {
+      @include tabletTitle;
     }
-
-    .contact-bottom {
-      height: 100%;
-      margin: 0 20px;
+    .contact-map-form {
       justify-content: center;
-      .contact-bottom__top {
-        form {
-          div > input,
-          textarea {
-            height: 40px;
-            margin-bottom: 1.5vh;
-          }
-          div > input[type="submit"] {
-            height: 40px;
-            border-radius: 20px;
-          }
+      align-items: center;
+      flex-direction: row-reverse;
+      width: 100%;
+      height: 50vh;
+      .contact-top {
+        height: 100%;
+        margin: 0 5px;
+        padding: 20px;
 
-          .half-bottom {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            #contact-textarea {
-              height: 20vh;
-              max-height: 20vh;
-              max-width: 100%;
+        #mapboxgl {
+          height: 85%;
+          border: 1px solid rgba($borderColor, 0.5);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.28);
+          border-radius: 8px;
+        }
+      }
+
+      .contact-bottom {
+        height: 100%;
+        margin: 0 20px;
+        justify-content: center;
+        .contact-bottom__top {
+          form {
+            div > input,
+            textarea {
+              height: 40px;
+              margin-bottom: 1.5vh;
+            }
+            div > input[type="submit"] {
+              height: 40px;
+              border-radius: 20px;
+            }
+
+            .half-bottom {
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: center;
+              align-items: center;
+              #contact-textarea {
+                height: 20vh;
+                max-height: 20vh;
+                max-width: 100%;
+              }
             }
           }
         }

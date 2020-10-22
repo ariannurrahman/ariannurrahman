@@ -5,6 +5,8 @@ import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import gsap from "gsap";
+import Sidebar from "./Sidebar";
+import Socialmedia from "./Socialmedia";
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [wait, setWait] = useState(false);
@@ -60,13 +62,12 @@ const Contact = () => {
 
       gsap.fromTo(
         ".slide",
-        { transform: "translateX(-150%)", autoAlpha: 0 },
+        { autoAlpha: 0 },
         {
           autoAlpha: 1,
-          duration: 0.8,
-          stagger: 0.5,
+          duration: 1,
+          stagger: 0.8,
           ease: "power4.out",
-          transform: "translateX(0%)",
         }
       );
     };
@@ -133,7 +134,8 @@ const Contact = () => {
         </div>
         {success ? emailResponse() : null}
       </div>
-      {/* <Informations /> */}
+      <Sidebar />
+      <Socialmedia />
     </div>
   );
 };

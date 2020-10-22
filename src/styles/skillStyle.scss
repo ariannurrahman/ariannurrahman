@@ -1,17 +1,10 @@
 @import "./utility/variable.scss";
 
 .skills-container {
-  @include centerAllFlex;
-  flex-flow: column nowrap;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: $darkGreen;
-  z-index: 30;
+  @include containerStyle;
+  width: 95%;
   .skill-wrapper {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
+    @include wrapperStyle;
     .skill-title {
       @include mobileTitle;
     }
@@ -27,7 +20,7 @@
           @include mobileDesc;
         }
         .skill-right-mobile {
-          margin: 12px;
+          margin: 5px;
           a {
             text-decoration: none;
           }
@@ -49,10 +42,7 @@
 
 @media only screen and (min-width: 768px) {
   .skills-container {
-    flex-flow: row nowrap;
-    height: 90vh;
-    width: 90%;
-    margin: 0 auto;
+    height: 100%;
     .skill-wrapper {
       .skill-desc {
         @include mobileDesc;

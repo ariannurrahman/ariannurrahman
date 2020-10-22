@@ -87,7 +87,7 @@
   display: none;
 }
 
-.header-container .sosmed-container {
+.header-container .header-sosmed-container {
   display: none;
 }
 
@@ -116,7 +116,7 @@
         -ms-flex: 1;
             flex: 1;
   }
-  .header-container .sosmed-container {
+  .header-container .header-sosmed-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -241,7 +241,7 @@
             transform: translate(-50%, -50%);
     text-align: center;
   }
-  .header-container .sosmed-container {
+  .header-container .header-sosmed-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

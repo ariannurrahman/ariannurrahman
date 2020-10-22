@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import "../styles/mainstyle.css";
 import Home from "./Home";
@@ -24,11 +24,13 @@ const App = () => {
         <div className="ui-container">
           <BrowserRouter>
             <Header />
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/skills" exact component={Skills} />
-            <Route path="/contact" exact component={Contact} />
-            <Route path="/works" exact component={Works} />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" exact component={About} />
+              <Route path="/skills" exact component={Skills} />
+              <Route path="/contact" exact component={Contact} />
+              <Route path="/works" exact component={Works} />
+            </Switch>
             <CustomParticle />
           </BrowserRouter>
         </div>

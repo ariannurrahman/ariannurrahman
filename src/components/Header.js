@@ -105,7 +105,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className="sosmed-container">{renderSosmed}</div>
+      <div className="header-sosmed-container">{renderSosmed}</div>
     </div>
   );
 };

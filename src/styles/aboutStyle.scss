@@ -1,19 +1,8 @@
 @import "./utility/variable.scss";
 .about-container {
-  @include centerAllFlex;
-  flex-flow: column nowrap;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  color: $darkGreen;
-  z-index: 80;
-  top: 0;
+  @include containerStyle;
   .about-wrapper {
-    @include centerAllFlex;
-    flex-flow: column nowrap;
-    position: relative;
-    width: 80%;
+    @include wrapperStyle;
     .about-title {
       @include mobileTitle;
     }
