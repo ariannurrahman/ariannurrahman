@@ -13,7 +13,7 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   position: relative;
-  width: 80%;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
   color: #0e1116;
@@ -46,7 +46,24 @@
   font-size: 2rem;
 }
 
-.works-container .works-wrapper .works-card {
+.works-container .works-wrapper .works-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100%;
+}
+
+.works-container .works-wrapper .works-card-container .works-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,55 +81,92 @@
           box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
   border-radius: 24px;
   padding: 24px 12px;
+  height: 100%;
   width: 250px;
+  margin: 0 20px 20px;
 }
 
-.works-container .works-wrapper .works-card #works-link {
+.works-container .works-wrapper .works-card-container .works-card .works-link-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  height: 200px;
 }
 
-.works-container .works-wrapper .works-card #works-link img {
+.works-container .works-wrapper .works-card-container .works-card .works-link-wrapper div {
+  width: 100%;
+  height: 100%;
+}
+
+.works-container .works-wrapper .works-card-container .works-card .works-link-wrapper div #works-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.works-container .works-wrapper .works-card-container .works-card .works-link-wrapper div #works-link img {
+  height: 200px;
+  width: 100%;
   text-align: center;
-  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 12px;
 }
 
-.works-container .works-wrapper .works-card .modal-icon {
-  padding: 8px;
+.works-container .works-wrapper .works-card-container .works-card .modal-icon {
+  padding: 12px;
 }
 
-.works-container .works-wrapper .works-card .modal-icon .card-title {
+.works-container .works-wrapper .works-card-container .works-card .modal-icon .card-title {
   width: 100%;
   margin: 12px auto;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
 }
 
-.works-container .works-wrapper .works-card .modal-icon .card-tech {
+.works-container .works-wrapper .works-card-container .works-card .modal-icon .card-tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 12px auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-.works-container .works-wrapper .works-card .modal-icon .card-tech #tech {
+.works-container .works-wrapper .works-card-container .works-card .modal-icon .card-tech #tech {
+  margin: 0px 4px 8px;
   background-color: #374a67;
-  margin-right: 8px;
   padding: 8px;
   border-radius: 12px;
   color: white;
   letter-spacing: 0.4px;
 }
 
-.works-container .works-wrapper .works-card .modal-icon .card-desc {
+.works-container .works-wrapper .works-card-container .works-card .modal-icon .card-desc {
   width: 100%;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -125,6 +179,12 @@
 @media only screen and (min-width: 1024px) {
   .works-container {
     width: 100%;
+  }
+  .works-container .works-wrapper .works-card-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
   }
   .works-container .works-wrapper .works-title {
     text-align: center;

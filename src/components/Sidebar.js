@@ -26,6 +26,7 @@ const Sidebar = () => {
         }
         target="_blank"
         rel="noopener noreferrer"
+        key={idx}
       >
         <button className="icon-wrapper">
           <img src={contact} alt="whatsapp icon" />

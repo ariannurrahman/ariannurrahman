@@ -1,3 +1,3 @@
-## ** Hi! This is my resume website **
+# Hi! This is my resume website
 
-### ** ariannurrahman.com **
+### Visit https://www.ariannurrahman.com/
