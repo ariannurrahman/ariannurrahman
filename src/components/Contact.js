@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
+import gsap from "gsap";
+
 import "../styles/mainstyle.css";
 import "../styles/contact/contactStyle.css";
 import mapboxgl from "mapbox-gl";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-import gsap from "gsap";
 import Sidebar from "./Sidebar";
 import Socialmedia from "./Socialmedia";
 const Contact = () => {
@@ -59,44 +60,40 @@ const Contact = () => {
         setMap(map);
         map.resize();
       });
-
-      gsap.fromTo(
-        ".slide",
-        { autoAlpha: 0 },
-        {
-          autoAlpha: 1,
-          duration: 1,
-          stagger: 0.8,
-          ease: "power4.out",
-        }
-      );
     };
 
     if (!map) initializeMap({ setMap, mapContainer });
   }, [map]);
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".slide",
+      { autoAlpha: 0, transform: "translateX(-100%)" },
+      {
+        delay: 0.3,
+        duration: 1,
+        stagger: 0.25,
+        ease: "power2",
+        transform: "translateX(0%)",
+        paused: false,
+        autoAlpha: 1,
+      }
+    );
+  }, []);
+
   return (
     <div className="contact-container">
       <div className="contact-title slide">Contact Me</div>
       <div className="contact-greeting slide">
-        If you have any question or want to talk, don't hesitate to contact me
-        using the form below.
+        If you have any question or want to talk, don't hesitate to contact me using the form below.
       </div>
       <div className="contact-map-form ">
         <div className="contact-top slide">
-          <div
-            id="mapboxgl"
-            ref={(el) => (mapContainer.current = el)}
-            style={{ borderRadius: "8px" }}
-          ></div>
+          <div id="mapboxgl" ref={(el) => (mapContainer.current = el)} style={{ borderRadius: "8px" }}></div>
         </div>
         <div className="contact-bottom slide">
           <div className="contact-bottom__top">
-            <form
-              id="contact"
-              autoComplete="off"
-              onSubmit={handleSubmit(onSubmit)}
-            >
+            <form id="contact" autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
               <div className="half-top">
                 <input
                   type="text"
@@ -114,12 +111,7 @@ const Contact = () => {
                 ></input>
               </div>
               <div className="half-bottom">
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  ref={register({ required: true })}
-                  name="subject"
-                ></input>
+                <input type="text" placeholder="Subject" ref={register({ required: true })} name="subject"></input>
                 <textarea
                   type="text"
                   placeholder="Message"

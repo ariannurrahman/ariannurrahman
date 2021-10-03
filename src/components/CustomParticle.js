@@ -15,7 +15,7 @@ const CustomParticle = () => {
         params={{
           particles: {
             number: {
-              value: widthResolution >= 1023 ? 70 : 50,
+              value: widthResolution >= 1023 ? 30 : 10,
               density: {
                 enable: true,
                 value_area: 3000,

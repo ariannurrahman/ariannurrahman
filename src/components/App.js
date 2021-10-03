@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import "../styles/mainstyle.css";
@@ -12,33 +12,29 @@ import Loader from "./Loader";
 const App = () => {
   const [loading, setLoading] = useState(false);
 
-  setTimeout(() => {
-    return setLoading(true);
-  }, 1600);
+  useEffect(() => {
+    setTimeout(() => {
+      return setLoading(true);
+    }, 1600);
+  }, []);
 
-  const renderApp = () => {
-    if (!loading) {
-      return <Loader />;
-    } else {
-      return (
-        <div className="ui-container">
-          <BrowserRouter>
-            <Header />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/about" exact component={About} />
-              <Route path="/skills" exact component={Skills} />
-              <Route path="/contact" exact component={Contact} />
-              <Route path="/works" exact component={Works} />
-            </Switch>
-            <CustomParticle />
-          </BrowserRouter>
-        </div>
-      );
-    }
-  };
-
-  return renderApp();
+  return !loading ? (
+    <Loader />
+  ) : (
+    <div className="ui-container">
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/skills" exact component={Skills} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/works" exact component={Works} />
+        </Switch>
+        <CustomParticle />
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;

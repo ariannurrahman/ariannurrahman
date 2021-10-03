@@ -10,7 +10,7 @@ const Socialmedia = () => {
 
   const renderContacts = contactIcon.map((contact, idx) => {
     return (
-      <div className="socialmedia-link-container">
+      <div className="socialmedia-link-container" key={idx}>
         <a
           id="contact-link"
           href={
