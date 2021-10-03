@@ -12,14 +12,15 @@
     .works-card-container {
       @include centerAllFlex;
       flex-flow: column nowrap;
-      height: 100%;
+      // height: 100%;
       .works-card {
+        height: 500px;
+        min-height: 500px;
         @include centerAllFlex;
         flex-flow: column nowrap;
         box-shadow: 0px 0px 21px -4px rgba(0, 0, 0, 0.4);
         border-radius: 24px;
         padding: 24px 12px;
-        height: 100%;
         width: 250px;
         margin: 0 20px 20px;
         .works-link-wrapper {

@@ -23,10 +23,9 @@ const Contact = () => {
     const serviceId = "arian.dev";
     success ? setWait(true) : setWait(false);
     emailjs.sendForm(serviceId, templateId, "#contact", userId).then(
-      (response) => {
+      () => {
         setSuccess(success);
         event.target.reset();
-        console.log(response);
       },
       (error) => {
         console.log(error);
